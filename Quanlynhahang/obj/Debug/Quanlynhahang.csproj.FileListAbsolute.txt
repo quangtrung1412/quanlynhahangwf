@@ -1,0 +1,17 @@
+C:\Users\trung\source\repos\Quanlynhahang\Quanlynhahang\bin\Debug\Quanlynhahang.exe
+C:\Users\trung\source\repos\Quanlynhahang\Quanlynhahang\bin\Debug\Quanlynhahang.pdb
+C:\Users\trung\source\repos\Quanlynhahang\Quanlynhahang\bin\Debug\Guna.UI2.dll
+C:\Users\trung\source\repos\Quanlynhahang\Quanlynhahang\obj\Debug\Quanlynhahang.Form1.resources
+C:\Users\trung\source\repos\Quanlynhahang\Quanlynhahang\obj\Debug\Quanlynhahang.Properties.Resources.resources
+C:\Users\trung\source\repos\Quanlynhahang\Quanlynhahang\obj\Debug\Quanlynhahang.csproj.GenerateResource.cache
+C:\Users\trung\source\repos\Quanlynhahang\Quanlynhahang\obj\Debug\Quanlynhahang.csproj.CoreCompileInputs.cache
+C:\Users\trung\source\repos\Quanlynhahang\Quanlynhahang\obj\Debug\Quanlynhahang.csproj.CopyComplete
+C:\Users\trung\source\repos\Quanlynhahang\Quanlynhahang\obj\Debug\Quanlynhahang.exe
+C:\Users\trung\source\repos\Quanlynhahang\Quanlynhahang\obj\Debug\Quanlynhahang.pdb
+C:\Users\trung\source\repos\Quanlynhahang\Quanlynhahang\obj\Debug\Quanlynhahang.Views.Home.resources
+C:\Users\trung\source\repos\Quanlynhahang\Quanlynhahang\obj\Debug\Quanlynhahang.Views.ListTable.resources
+C:\Users\trung\source\repos\Quanlynhahang\Quanlynhahang\obj\Debug\Quanlynhahang.Views.Foods.resources
+C:\Users\trung\source\repos\Quanlynhahang\Quanlynhahang\obj\Debug\Quanlynhahang.Views.ListFood.resources
+C:\Users\trung\source\repos\Quanlynhahang\Quanlynhahang\obj\Debug\Quanlynhahang.Views.Table.resources
+C:\Users\trung\source\repos\Quanlynhahang\Quanlynhahang\obj\Debug\Quanlynhahang.Views.TableBusy.resources
+C:\Users\trung\source\repos\Quanlynhahang\Quanlynhahang\obj\Debug\Quanlynhahang.csprojAssemblyReference.cache
