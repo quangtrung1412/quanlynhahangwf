@@ -14,6 +14,12 @@ namespace Quanlynhahang.Views
         public ListTable()
         {
             InitializeComponent();
+            for (int i = 0; i < 10; i++)
+            {
+                Views.Table tb = new Views.Table();
+                this.flowLayoutPanel1.Controls.Add(tb);
+                tb.TableClick(handle);
+            }
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
@@ -34,6 +40,15 @@ namespace Quanlynhahang.Views
         private void guna2TextBox1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+            
+        }
+        private void handle(object sender, EventArgs e)
+        {
+            
         }
     }
 }

@@ -74,7 +74,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
-            this.Margin = new System.Windows.Forms.Padding(10);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "Table";
             this.Size = new System.Drawing.Size(135, 180);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

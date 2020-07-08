@@ -32,14 +32,23 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net40\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Guna.UI2">
       <HintPath>E:\Guna.UI-Framework-Lib-master\Guna.UI2.WinForms_v2.0.0.6\.net 4.0\Guna.UI2.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
     <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -50,19 +59,88 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAO\IAccountDAO.cs" />
+    <Compile Include="DAO\Implements\AccountDAO.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Handle\LoginHandle.cs" />
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Account.cs">
+      <DependentUpon>QuanLyNhaHang.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Bill.cs">
+      <DependentUpon>QuanLyNhaHang.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BillDetail.cs">
+      <DependentUpon>QuanLyNhaHang.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Desk.cs">
+      <DependentUpon>QuanLyNhaHang.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Food.cs">
+      <DependentUpon>QuanLyNhaHang.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\FoodType.cs">
+      <DependentUpon>QuanLyNhaHang.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\QuanLyNhaHang.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLyNhaHang.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\QuanLyNhaHang.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLyNhaHang.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\QuanLyNhaHang.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLyNhaHang.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Usp_GetAccountByLoginInfo_Result.cs">
+      <DependentUpon>QuanLyNhaHang.tt</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\AddFood.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\AddFood.Designer.cs">
+      <DependentUpon>AddFood.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AddTable.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\AddTable.Designer.cs">
+      <DependentUpon>AddTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Foods.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Views\Foods.Designer.cs">
       <DependentUpon>Foods.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FormFood.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FormFood.Designer.cs">
+      <DependentUpon>FormFood.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\HisItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\HisItem.Designer.cs">
+      <DependentUpon>HisItem.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\History.cs">
       <SubType>UserControl</SubType>
@@ -76,11 +154,11 @@
     <Compile Include="Views\Home.Designer.cs">
       <DependentUpon>Home.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\ListFood.cs">
+    <Compile Include="Views\ListFoods.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Views\ListFood.Designer.cs">
-      <DependentUpon>ListFood.cs</DependentUpon>
+    <Compile Include="Views\ListFoods.Designer.cs">
+      <DependentUpon>ListFoods.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\ListTable.cs">
       <SubType>UserControl</SubType>
@@ -88,11 +166,23 @@
     <Compile Include="Views\ListTable.Designer.cs">
       <DependentUpon>ListTable.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\Materials.cs">
+    <Compile Include="Views\Overlay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Overlay.Designer.cs">
+      <DependentUpon>Overlay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Setting.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Views\Materials.Designer.cs">
-      <DependentUpon>Materials.cs</DependentUpon>
+    <Compile Include="Views\Setting.Designer.cs">
+      <DependentUpon>Setting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Register.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Register.Designer.cs">
+      <DependentUpon>Register.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Table.cs">
       <SubType>UserControl</SubType>
@@ -109,6 +199,9 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -119,8 +212,20 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Views\AddFood.resx">
+      <DependentUpon>AddFood.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\AddTable.resx">
+      <DependentUpon>AddTable.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Foods.resx">
       <DependentUpon>Foods.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FormFood.resx">
+      <DependentUpon>FormFood.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\HisItem.resx">
+      <DependentUpon>HisItem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\History.resx">
       <DependentUpon>History.cs</DependentUpon>
@@ -128,11 +233,20 @@
     <EmbeddedResource Include="Views\Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\ListFood.resx">
-      <DependentUpon>ListFood.cs</DependentUpon>
+    <EmbeddedResource Include="Views\ListFoods.resx">
+      <DependentUpon>ListFoods.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\ListTable.resx">
       <DependentUpon>ListTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Overlay.resx">
+      <DependentUpon>Overlay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Setting.resx">
+      <DependentUpon>Setting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Register.resx">
+      <DependentUpon>Register.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Table.resx">
       <DependentUpon>Table.cs</DependentUpon>
@@ -140,6 +254,15 @@
     <EmbeddedResource Include="Views\TableBusy.resx">
       <DependentUpon>TableBusy.cs</DependentUpon>
     </EmbeddedResource>
+    <EntityDeploy Include="Models\QuanLyNhaHang.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>QuanLyNhaHang.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="App.Config" />
+    <None Include="Models\QuanLyNhaHang.edmx.diagram">
+      <DependentUpon>QuanLyNhaHang.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -206,6 +329,44 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\create_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\taipei-2845695_1920.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7724797_stock-vector-fast-food-restaurant.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\666ae6c30382eadcb3931.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7724797_stock-vector-fast-food-restaurant1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\taipei-2845695_19201.jpg" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\pngtree-vector-users-icon-png-image_8569521.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngtree-vector-users-icon-png-image_8569522.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Models\QuanLyNhaHang.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>QuanLyNhaHang.Context.cs</LastGenOutput>
+      <DependentUpon>QuanLyNhaHang.edmx</DependentUpon>
+    </Content>
+    <Content Include="Models\QuanLyNhaHang.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>QuanLyNhaHang.edmx</DependentUpon>
+      <LastGenOutput>QuanLyNhaHang.cs</LastGenOutput>
+    </Content>
+    <None Include="Resources\foodpicture.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

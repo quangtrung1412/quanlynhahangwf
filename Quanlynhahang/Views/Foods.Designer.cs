@@ -40,19 +40,19 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.panel8 = new System.Windows.Forms.Panel();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.panel9 = new System.Windows.Forms.Panel();
             this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel8.SuspendLayout();
-            this.panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            this.panel9.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -76,7 +76,7 @@
             this.panel2.Controls.Add(this.guna2HtmlLabel2);
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(48, 100);
+            this.panel2.Size = new System.Drawing.Size(37, 100);
             this.panel2.TabIndex = 0;
             // 
             // guna2HtmlLabel2
@@ -102,9 +102,9 @@
             // 
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel5.Controls.Add(this.guna2HtmlLabel1);
-            this.panel5.Location = new System.Drawing.Point(48, 0);
+            this.panel5.Location = new System.Drawing.Point(37, 0);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(278, 100);
+            this.panel5.Size = new System.Drawing.Size(260, 100);
             this.panel5.TabIndex = 1;
             // 
             // guna2HtmlLabel1
@@ -121,9 +121,9 @@
             // 
             this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel6.Controls.Add(this.guna2HtmlLabel3);
-            this.panel6.Location = new System.Drawing.Point(326, 0);
+            this.panel6.Location = new System.Drawing.Point(297, 0);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(107, 100);
+            this.panel6.Size = new System.Drawing.Size(110, 100);
             this.panel6.TabIndex = 1;
             // 
             // guna2HtmlLabel3
@@ -141,9 +141,9 @@
             // 
             this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel7.Controls.Add(this.guna2HtmlLabel4);
-            this.panel7.Location = new System.Drawing.Point(433, 0);
+            this.panel7.Location = new System.Drawing.Point(407, 0);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(107, 100);
+            this.panel7.Size = new System.Drawing.Size(110, 100);
             this.panel7.TabIndex = 1;
             // 
             // guna2HtmlLabel4
@@ -161,10 +161,21 @@
             // 
             this.panel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel8.Controls.Add(this.guna2PictureBox1);
-            this.panel8.Location = new System.Drawing.Point(540, 0);
+            this.panel8.Location = new System.Drawing.Point(517, 0);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(154, 100);
+            this.panel8.Size = new System.Drawing.Size(150, 100);
             this.panel8.TabIndex = 1;
+            // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.Image = global::Quanlynhahang.Properties.Resources._666ae6c30382eadcb393;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(35, 14);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.ShadowDecoration.Parent = this.guna2PictureBox1;
+            this.guna2PictureBox1.Size = new System.Drawing.Size(80, 60);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2PictureBox1.TabIndex = 0;
+            this.guna2PictureBox1.TabStop = false;
             // 
             // panel9
             // 
@@ -172,9 +183,9 @@
             this.panel9.Controls.Add(this.guna2Button3);
             this.panel9.Controls.Add(this.guna2Button2);
             this.panel9.Controls.Add(this.guna2Button1);
-            this.panel9.Location = new System.Drawing.Point(694, 0);
+            this.panel9.Location = new System.Drawing.Point(667, 0);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(266, 100);
+            this.panel9.Size = new System.Drawing.Size(241, 100);
             this.panel9.TabIndex = 1;
             // 
             // guna2Button3
@@ -188,7 +199,7 @@
             this.guna2Button3.HoverState.Parent = this.guna2Button3;
             this.guna2Button3.Image = global::Quanlynhahang.Properties.Resources.trash_32px;
             this.guna2Button3.ImageSize = new System.Drawing.Size(32, 32);
-            this.guna2Button3.Location = new System.Drawing.Point(183, 28);
+            this.guna2Button3.Location = new System.Drawing.Point(175, 28);
             this.guna2Button3.Name = "guna2Button3";
             this.guna2Button3.ShadowDecoration.Parent = this.guna2Button3;
             this.guna2Button3.Size = new System.Drawing.Size(45, 45);
@@ -206,7 +217,7 @@
             this.guna2Button2.HoverState.Parent = this.guna2Button2;
             this.guna2Button2.Image = global::Quanlynhahang.Properties.Resources.create_32px;
             this.guna2Button2.ImageSize = new System.Drawing.Size(32, 32);
-            this.guna2Button2.Location = new System.Drawing.Point(105, 27);
+            this.guna2Button2.Location = new System.Drawing.Point(99, 27);
             this.guna2Button2.Name = "guna2Button2";
             this.guna2Button2.ShadowDecoration.Parent = this.guna2Button2;
             this.guna2Button2.Size = new System.Drawing.Size(45, 45);
@@ -223,28 +234,18 @@
             this.guna2Button1.HoverState.Parent = this.guna2Button1;
             this.guna2Button1.Image = global::Quanlynhahang.Properties.Resources.create_document_32px;
             this.guna2Button1.ImageSize = new System.Drawing.Size(32, 32);
-            this.guna2Button1.Location = new System.Drawing.Point(24, 27);
+            this.guna2Button1.Location = new System.Drawing.Point(21, 27);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
             this.guna2Button1.Size = new System.Drawing.Size(45, 45);
             this.guna2Button1.TabIndex = 0;
             this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
-            // guna2PictureBox1
-            // 
-            this.guna2PictureBox1.Image = global::Quanlynhahang.Properties.Resources._666ae6c30382eadcb393;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(35, 14);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.ShadowDecoration.Parent = this.guna2PictureBox1;
-            this.guna2PictureBox1.Size = new System.Drawing.Size(80, 60);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2PictureBox1.TabIndex = 0;
-            this.guna2PictureBox1.TabStop = false;
-            // 
             // Foods
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.panel9);
             this.Controls.Add(this.panel8);
             this.Controls.Add(this.panel7);
@@ -254,7 +255,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "Foods";
-            this.Size = new System.Drawing.Size(960, 100);
+            this.Size = new System.Drawing.Size(906, 98);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -265,8 +266,8 @@
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             this.panel8.ResumeLayout(false);
-            this.panel9.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
+            this.panel9.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

@@ -127,8 +127,26 @@
   <data name="pizza_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pizza_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="666ae6c30382eadcb3931" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\666ae6c30382eadcb3931.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="settings_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\settings_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="7724797_stock-vector-fast-food-restaurant1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\7724797_stock-vector-fast-food-restaurant1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="depositphotos_91968566-stock-illustration-rising-graph-simple-web-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\depositphotos_91968566-stock-illustration-rising-graph-simple-web-icon.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="create_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\create_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="taipei-2845695_19201" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\taipei-2845695_19201.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="images" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="edit_chat_history_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\edit_chat_history_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -136,14 +154,17 @@
   <data name="home_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\home_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="2Ys_Column_LineSym" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\2Ys_Column_LineSym.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="taipei-2845695_1920" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\taipei-2845695_1920.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="666ae6c30382eadcb393" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\666ae6c30382eadcb393.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="meat_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\meat_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="pngtree-vector-users-icon-png-image_8569522" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pngtree-vector-users-icon-png-image_8569522.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="vn-marketshare-10-19_1_800x450" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\vn-marketshare-10-19_1_800x450.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="restaurant_table_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\restaurant_table_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -151,11 +172,14 @@
   <data name="download" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\download.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="pngtree-vector-users-icon-png-image_8569521" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pngtree-vector-users-icon-png-image_8569521.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="we are" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\we are.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="vn-marketshare-10-19_1_800x450" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\vn-marketshare-10-19_1_800x450.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="2Ys_Column_LineSym" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\2Ys_Column_LineSym.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="images (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\images (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -166,13 +190,13 @@
   <data name="create_document_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\create_document_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="images" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\images.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="meat_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\meat_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="settings_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\settings_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="7724797_stock-vector-fast-food-restaurant" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\7724797_stock-vector-fast-food-restaurant.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="create_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\create_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="foodpicture" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\foodpicture.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

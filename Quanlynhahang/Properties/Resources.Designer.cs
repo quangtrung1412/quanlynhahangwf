@@ -83,6 +83,36 @@ namespace Quanlynhahang.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _666ae6c30382eadcb3931 {
+            get {
+                object obj = ResourceManager.GetObject("666ae6c30382eadcb3931", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _7724797_stock_vector_fast_food_restaurant {
+            get {
+                object obj = ResourceManager.GetObject("7724797_stock-vector-fast-food-restaurant", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _7724797_stock_vector_fast_food_restaurant1 {
+            get {
+                object obj = ResourceManager.GetObject("7724797_stock-vector-fast-food-restaurant1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap create_32px {
             get {
                 object obj = ResourceManager.GetObject("create_32px", resourceCulture);
@@ -126,6 +156,16 @@ namespace Quanlynhahang.Properties {
         internal static System.Drawing.Bitmap edit_chat_history_32px {
             get {
                 object obj = ResourceManager.GetObject("edit_chat_history_32px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap foodpicture {
+            get {
+                object obj = ResourceManager.GetObject("foodpicture", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -203,6 +243,26 @@ namespace Quanlynhahang.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap pngtree_vector_users_icon_png_image_8569521 {
+            get {
+                object obj = ResourceManager.GetObject("pngtree-vector-users-icon-png-image_8569521", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pngtree_vector_users_icon_png_image_8569522 {
+            get {
+                object obj = ResourceManager.GetObject("pngtree-vector-users-icon-png-image_8569522", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap restaurant_table_32px {
             get {
                 object obj = ResourceManager.GetObject("restaurant_table_32px", resourceCulture);
@@ -216,6 +276,26 @@ namespace Quanlynhahang.Properties {
         internal static System.Drawing.Bitmap settings_32px {
             get {
                 object obj = ResourceManager.GetObject("settings_32px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap taipei_2845695_1920 {
+            get {
+                object obj = ResourceManager.GetObject("taipei-2845695_1920", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap taipei_2845695_19201 {
+            get {
+                object obj = ResourceManager.GetObject("taipei-2845695_19201", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
