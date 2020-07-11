@@ -34,6 +34,24 @@ namespace Quanlynhahang.Models
         public virtual DbSet<Food> Foods { get; set; }
         public virtual DbSet<FoodType> FoodTypes { get; set; }
     
+        public virtual int Usp_DeleteDesk(string id)
+        {
+            var idParameter = id != null ?
+                new ObjectParameter("id", id) :
+                new ObjectParameter("id", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("Usp_DeleteDesk", idParameter);
+        }
+    
+        public virtual int Usp_DeleteFood(string id)
+        {
+            var idParameter = id != null ?
+                new ObjectParameter("id", id) :
+                new ObjectParameter("id", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("Usp_DeleteFood", idParameter);
+        }
+    
         public virtual ObjectResult<Usp_GetAccountByLoginInfo_Result> Usp_GetAccountByLoginInfo(string email, string password)
         {
             var emailParameter = email != null ?
@@ -45,6 +63,179 @@ namespace Quanlynhahang.Models
                 new ObjectParameter("password", typeof(string));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Usp_GetAccountByLoginInfo_Result>("Usp_GetAccountByLoginInfo", emailParameter, passwordParameter);
+        }
+    
+        public virtual ObjectResult<Usp_GetAllBill_Result> Usp_GetAllBill(Nullable<System.DateTime> from, Nullable<System.DateTime> to)
+        {
+            var fromParameter = from.HasValue ?
+                new ObjectParameter("from", from) :
+                new ObjectParameter("from", typeof(System.DateTime));
+    
+            var toParameter = to.HasValue ?
+                new ObjectParameter("to", to) :
+                new ObjectParameter("to", typeof(System.DateTime));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Usp_GetAllBill_Result>("Usp_GetAllBill", fromParameter, toParameter);
+        }
+    
+        public virtual ObjectResult<Usp_GetAllBillDetail_Result> Usp_GetAllBillDetail(string billId)
+        {
+            var billIdParameter = billId != null ?
+                new ObjectParameter("billId", billId) :
+                new ObjectParameter("billId", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Usp_GetAllBillDetail_Result>("Usp_GetAllBillDetail", billIdParameter);
+        }
+    
+        public virtual ObjectResult<Usp_GetAllDesk_Result> Usp_GetAllDesk()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Usp_GetAllDesk_Result>("Usp_GetAllDesk");
+        }
+    
+        public virtual ObjectResult<Usp_GetAllFood_Result> Usp_GetAllFood()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Usp_GetAllFood_Result>("Usp_GetAllFood");
+        }
+    
+        public virtual ObjectResult<Usp_GetAllFoodType_Result> Usp_GetAllFoodType()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Usp_GetAllFoodType_Result>("Usp_GetAllFoodType");
+        }
+    
+        public virtual ObjectResult<Usp_GetFoodByFoodType_Result> Usp_GetFoodByFoodType(string typeId)
+        {
+            var typeIdParameter = typeId != null ?
+                new ObjectParameter("typeId", typeId) :
+                new ObjectParameter("typeId", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Usp_GetFoodByFoodType_Result>("Usp_GetFoodByFoodType", typeIdParameter);
+        }
+    
+        public virtual ObjectResult<Usp_GetFoodById_Result> Usp_GetFoodById(string id)
+        {
+            var idParameter = id != null ?
+                new ObjectParameter("id", id) :
+                new ObjectParameter("id", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Usp_GetFoodById_Result>("Usp_GetFoodById", idParameter);
+        }
+    
+        public virtual int Usp_InsertDesk(string id, string name, Nullable<byte> status)
+        {
+            var idParameter = id != null ?
+                new ObjectParameter("id", id) :
+                new ObjectParameter("id", typeof(string));
+    
+            var nameParameter = name != null ?
+                new ObjectParameter("name", name) :
+                new ObjectParameter("name", typeof(string));
+    
+            var statusParameter = status.HasValue ?
+                new ObjectParameter("status", status) :
+                new ObjectParameter("status", typeof(byte));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("Usp_InsertDesk", idParameter, nameParameter, statusParameter);
+        }
+    
+        public virtual int Usp_InsertFood(string id, string typeId, string name, Nullable<int> price, string unit, string picture)
+        {
+            var idParameter = id != null ?
+                new ObjectParameter("id", id) :
+                new ObjectParameter("id", typeof(string));
+    
+            var typeIdParameter = typeId != null ?
+                new ObjectParameter("typeId", typeId) :
+                new ObjectParameter("typeId", typeof(string));
+    
+            var nameParameter = name != null ?
+                new ObjectParameter("name", name) :
+                new ObjectParameter("name", typeof(string));
+    
+            var priceParameter = price.HasValue ?
+                new ObjectParameter("price", price) :
+                new ObjectParameter("price", typeof(int));
+    
+            var unitParameter = unit != null ?
+                new ObjectParameter("unit", unit) :
+                new ObjectParameter("unit", typeof(string));
+    
+            var pictureParameter = picture != null ?
+                new ObjectParameter("picture", picture) :
+                new ObjectParameter("picture", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("Usp_InsertFood", idParameter, typeIdParameter, nameParameter, priceParameter, unitParameter, pictureParameter);
+        }
+    
+        public virtual ObjectResult<Usp_SearchFoodByName_Result> Usp_SearchFoodByName(string name)
+        {
+            var nameParameter = name != null ?
+                new ObjectParameter("name", name) :
+                new ObjectParameter("name", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Usp_SearchFoodByName_Result>("Usp_SearchFoodByName", nameParameter);
+        }
+    
+        public virtual int Usp_UpdateAccountById(Nullable<int> id, string name, string pass, string avatar)
+        {
+            var idParameter = id.HasValue ?
+                new ObjectParameter("id", id) :
+                new ObjectParameter("id", typeof(int));
+    
+            var nameParameter = name != null ?
+                new ObjectParameter("name", name) :
+                new ObjectParameter("name", typeof(string));
+    
+            var passParameter = pass != null ?
+                new ObjectParameter("pass", pass) :
+                new ObjectParameter("pass", typeof(string));
+    
+            var avatarParameter = avatar != null ?
+                new ObjectParameter("avatar", avatar) :
+                new ObjectParameter("avatar", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("Usp_UpdateAccountById", idParameter, nameParameter, passParameter, avatarParameter);
+        }
+    
+        public virtual int USp_UpdateDesk(string id, Nullable<byte> status)
+        {
+            var idParameter = id != null ?
+                new ObjectParameter("id", id) :
+                new ObjectParameter("id", typeof(string));
+    
+            var statusParameter = status.HasValue ?
+                new ObjectParameter("status", status) :
+                new ObjectParameter("status", typeof(byte));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("USp_UpdateDesk", idParameter, statusParameter);
+        }
+    
+        public virtual int Usp_UpdateFood(string id, string typeId, string name, Nullable<int> price, string unit, string picture)
+        {
+            var idParameter = id != null ?
+                new ObjectParameter("id", id) :
+                new ObjectParameter("id", typeof(string));
+    
+            var typeIdParameter = typeId != null ?
+                new ObjectParameter("typeId", typeId) :
+                new ObjectParameter("typeId", typeof(string));
+    
+            var nameParameter = name != null ?
+                new ObjectParameter("name", name) :
+                new ObjectParameter("name", typeof(string));
+    
+            var priceParameter = price.HasValue ?
+                new ObjectParameter("price", price) :
+                new ObjectParameter("price", typeof(int));
+    
+            var unitParameter = unit != null ?
+                new ObjectParameter("unit", unit) :
+                new ObjectParameter("unit", typeof(string));
+    
+            var pictureParameter = picture != null ?
+                new ObjectParameter("picture", picture) :
+                new ObjectParameter("picture", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("Usp_UpdateFood", idParameter, typeIdParameter, nameParameter, priceParameter, unitParameter, pictureParameter);
         }
     }
 }

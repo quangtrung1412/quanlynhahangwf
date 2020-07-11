@@ -18,7 +18,6 @@ C:\Users\trung\source\repos\Quanlynhahang\Quanlynhahang\obj\Debug\Quanlynhahang.
 C:\Users\trung\source\repos\Quanlynhahang\Quanlynhahang\obj\Debug\Quanlynhahang.Views.Register.resources
 C:\Users\trung\source\repos\Quanlynhahang\Quanlynhahang\obj\Debug\Quanlynhahang.Views.ListFoods.resources
 C:\Users\trung\source\repos\Quanlynhahang\Quanlynhahang\obj\Debug\Quanlynhahang.Views.HisItem.resources
-C:\Users\trung\source\repos\Quanlynhahang\Quanlynhahang\obj\Debug\Quanlynhahang.csprojAssemblyReference.cache
 C:\Users\trung\source\repos\Quanlynhahang\Quanlynhahang\bin\Debug\Quanlynhahang.exe.config
 C:\Users\trung\source\repos\Quanlynhahang\Quanlynhahang\bin\Debug\EntityFramework.dll
 C:\Users\trung\source\repos\Quanlynhahang\Quanlynhahang\bin\Debug\EntityFramework.SqlServer.dll
@@ -29,3 +28,5 @@ C:\Users\trung\source\repos\Quanlynhahang\Quanlynhahang\obj\Debug\Quanlynhahang.
 C:\Users\trung\source\repos\Quanlynhahang\Quanlynhahang\obj\Debug\Quanlynhahang.Views.AddTable.resources
 C:\Users\trung\source\repos\Quanlynhahang\Quanlynhahang\obj\Debug\Quanlynhahang.Views.FormFood.resources
 C:\Users\trung\source\repos\Quanlynhahang\Quanlynhahang\obj\Debug\Quanlynhahang.Views.Overlay.resources
+C:\Users\trung\source\repos\Quanlynhahang\Quanlynhahang\obj\Debug\Quanlynhahang.csprojAssemblyReference.cache
+C:\Users\trung\source\repos\Quanlynhahang\Quanlynhahang\obj\Debug\Quanlynhahang.Views.Test.resources

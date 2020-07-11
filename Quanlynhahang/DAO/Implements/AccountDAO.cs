@@ -14,6 +14,12 @@ namespace Quanlynhahang.DAO.Implements
         {
             this.db = new QuanLyNhaHangEntities();
         }
+
+        public bool ChangePass(string password)
+        {
+            throw new NotImplementedException();
+        }
+
         public Account GetAccountByLoginInfo(string email, string password)
         {
             Account acc = null;

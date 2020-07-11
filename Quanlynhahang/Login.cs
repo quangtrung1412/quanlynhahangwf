@@ -54,5 +54,10 @@ namespace Quanlynhahang
             Form1 form = new Form1(acc);
             form.Show();
         }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

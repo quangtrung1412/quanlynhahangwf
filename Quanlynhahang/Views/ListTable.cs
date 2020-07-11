@@ -6,6 +6,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using Quanlynhahang.DAO.Implements;
 
 namespace Quanlynhahang.Views
 {
@@ -19,6 +20,7 @@ namespace Quanlynhahang.Views
                 Views.Table tb = new Views.Table();
                 this.flowLayoutPanel1.Controls.Add(tb);
                 tb.TableClick(handle);
+
             }
         }
 
@@ -32,23 +34,35 @@ namespace Quanlynhahang.Views
 
         }
 
-        private void panel4_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void guna2TextBox1_TextChanged(object sender, EventArgs e)
         {
 
         }
-
-        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-            
-        }
         private void handle(object sender, EventArgs e)
         {
             
+        }
+
+        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void BtnAddBillDetail_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CbTypeFood_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ListTable_Load(object sender, EventArgs e)
+        {
+            CbTypeFood.DataSource = new FoodTypeDao().GetFoodType();
+            CbTypeFood.ValueMember = "Id";
+            CbTypeFood.DisplayMember = "Name";
         }
     }
 }

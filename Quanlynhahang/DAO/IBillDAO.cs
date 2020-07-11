@@ -6,9 +6,10 @@ using System.Text;
 
 namespace Quanlynhahang.DAO
 {
-    public interface IAccountDAO
+    interface IBillDAO
     {
-        Account GetAccountByLoginInfo(string email, string password);
-        bool ChangePass(string password);
+        List<Bill> GetAllBill();
+        List<BillDetail> GetAllBillDetail();
+
     }
 }

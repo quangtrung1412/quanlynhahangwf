@@ -10,16 +10,9 @@
 namespace Quanlynhahang.Models
 {
     using System;
-    using System.Collections.Generic;
     
-    public partial class Food
+    public partial class Usp_GetFoodByFoodType_Result
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Food()
-        {
-            this.BillDetails = new HashSet<BillDetail>();
-        }
-    
         public string Id { get; set; }
         public string TypeId { get; set; }
         public string Name { get; set; }
@@ -27,9 +20,5 @@ namespace Quanlynhahang.Models
         public string Unit { get; set; }
         public string Picture { get; set; }
         public Nullable<byte> Status { get; set; }
-    
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<BillDetail> BillDetails { get; set; }
-        public virtual FoodType FoodType { get; set; }
     }
 }

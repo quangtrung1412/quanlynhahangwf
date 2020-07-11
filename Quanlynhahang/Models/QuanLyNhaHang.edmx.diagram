@@ -4,13 +4,13 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="8a46ee2ce01f4d56a612e53655ca6e05" Name="Diagram1">
+      <Diagram DiagramId="bdc57af86adf4cb78b357218e25b4087" Name="Diagram1">
         <EntityTypeShape EntityType="QuanLyNhaHangModel.Account" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
         <EntityTypeShape EntityType="QuanLyNhaHangModel.Bill" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
         <EntityTypeShape EntityType="QuanLyNhaHangModel.BillDetail" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
         <EntityTypeShape EntityType="QuanLyNhaHangModel.Desk" Width="1.5" PointX="0.75" PointY="5.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="QuanLyNhaHangModel.Food" Width="1.5" PointX="3" PointY="8" IsExpanded="true" />
-        <EntityTypeShape EntityType="QuanLyNhaHangModel.FoodType" Width="1.5" PointX="0.75" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyNhaHangModel.Food" Width="1.5" PointX="3" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyNhaHangModel.FoodType" Width="1.5" PointX="0.75" PointY="9.375" IsExpanded="true" />
         <AssociationConnector Association="QuanLyNhaHangModel.fk_user" ManuallyRouted="false" />
         <AssociationConnector Association="QuanLyNhaHangModel.fk_bi" ManuallyRouted="false" />
         <AssociationConnector Association="QuanLyNhaHangModel.fk_tbl" ManuallyRouted="false" />

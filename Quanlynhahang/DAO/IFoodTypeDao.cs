@@ -6,9 +6,8 @@ using System.Text;
 
 namespace Quanlynhahang.DAO
 {
-    public interface IAccountDAO
+    public interface IFoodTypeDao
     {
-        Account GetAccountByLoginInfo(string email, string password);
-        bool ChangePass(string password);
+        List<FoodType> GetFoodType();
     }
 }

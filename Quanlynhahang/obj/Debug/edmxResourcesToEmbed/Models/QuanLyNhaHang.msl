@@ -51,7 +51,9 @@
           <ScalarProperty Name="TypeId" ColumnName="TypeId" />
           <ScalarProperty Name="Name" ColumnName="Name" />
           <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Unit" ColumnName="Unit" />
           <ScalarProperty Name="Picture" ColumnName="Picture" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -63,6 +65,8 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="Usp_DeleteDesk" FunctionName="QuanLyNhaHangModel.Store.Usp_DeleteDesk" />
+    <FunctionImportMapping FunctionImportName="Usp_DeleteFood" FunctionName="QuanLyNhaHangModel.Store.Usp_DeleteFood" />
     <FunctionImportMapping FunctionImportName="Usp_GetAccountByLoginInfo" FunctionName="QuanLyNhaHangModel.Store.Usp_GetAccountByLoginInfo">
       <ResultMapping>
         <ComplexTypeMapping TypeName="QuanLyNhaHangModel.Usp_GetAccountByLoginInfo_Result">
@@ -75,5 +79,104 @@
         </ComplexTypeMapping>
       </ResultMapping>
     </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Usp_GetAllBill" FunctionName="QuanLyNhaHangModel.Store.Usp_GetAllBill">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QuanLyNhaHangModel.Usp_GetAllBill_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="DeskId" ColumnName="DeskId" />
+          <ScalarProperty Name="AccountId" ColumnName="AccountId" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+          <ScalarProperty Name="CreatedAt" ColumnName="CreatedAt" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Name1" ColumnName="Name1" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Usp_GetAllBillDetail" FunctionName="QuanLyNhaHangModel.Store.Usp_GetAllBillDetail">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QuanLyNhaHangModel.Usp_GetAllBillDetail_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="FoodId" ColumnName="FoodId" />
+          <ScalarProperty Name="BillId" ColumnName="BillId" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Usp_GetAllDesk" FunctionName="QuanLyNhaHangModel.Store.Usp_GetAllDesk">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QuanLyNhaHangModel.Usp_GetAllDesk_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Usp_GetAllFood" FunctionName="QuanLyNhaHangModel.Store.Usp_GetAllFood">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QuanLyNhaHangModel.Usp_GetAllFood_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TypeId" ColumnName="TypeId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Unit" ColumnName="Unit" />
+          <ScalarProperty Name="Picture" ColumnName="Picture" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Usp_GetAllFoodType" FunctionName="QuanLyNhaHangModel.Store.Usp_GetAllFoodType">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QuanLyNhaHangModel.Usp_GetAllFoodType_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Usp_GetFoodByFoodType" FunctionName="QuanLyNhaHangModel.Store.Usp_GetFoodByFoodType">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QuanLyNhaHangModel.Usp_GetFoodByFoodType_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TypeId" ColumnName="TypeId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Unit" ColumnName="Unit" />
+          <ScalarProperty Name="Picture" ColumnName="Picture" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Usp_GetFoodById" FunctionName="QuanLyNhaHangModel.Store.Usp_GetFoodById">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QuanLyNhaHangModel.Usp_GetFoodById_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TypeId" ColumnName="TypeId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Unit" ColumnName="Unit" />
+          <ScalarProperty Name="Picture" ColumnName="Picture" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Usp_InsertDesk" FunctionName="QuanLyNhaHangModel.Store.Usp_InsertDesk" />
+    <FunctionImportMapping FunctionImportName="Usp_InsertFood" FunctionName="QuanLyNhaHangModel.Store.Usp_InsertFood" />
+    <FunctionImportMapping FunctionImportName="Usp_SearchFoodByName" FunctionName="QuanLyNhaHangModel.Store.Usp_SearchFoodByName">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QuanLyNhaHangModel.Usp_SearchFoodByName_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TypeId" ColumnName="TypeId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Unit" ColumnName="Unit" />
+          <ScalarProperty Name="Picture" ColumnName="Picture" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Usp_UpdateAccountById" FunctionName="QuanLyNhaHangModel.Store.Usp_UpdateAccountById" />
+    <FunctionImportMapping FunctionImportName="USp_UpdateDesk" FunctionName="QuanLyNhaHangModel.Store.USp_UpdateDesk" />
+    <FunctionImportMapping FunctionImportName="Usp_UpdateFood" FunctionName="QuanLyNhaHangModel.Store.Usp_UpdateFood" />
   </EntityContainerMapping>
 </Mapping>
