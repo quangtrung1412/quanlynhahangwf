@@ -8,7 +8,7 @@ namespace Quanlynhahang.DAO
 {
     interface IBillDAO
     {
-        List<Bill> GetAllBill();
+        List<Bill> GetAllBill(DateTime from ,DateTime to);
         List<BillDetail> GetAllBillDetail();
 
     }

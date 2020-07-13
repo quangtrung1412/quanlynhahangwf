@@ -45,7 +45,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.fpFoodList = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -251,23 +251,23 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "#";
             // 
-            // flowLayoutPanel1
+            // fpFoodList
             // 
-            this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.AutoScrollMinSize = new System.Drawing.Size(0, 567);
-            this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.BottomUp;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(14, 196);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(936, 567);
-            this.flowLayoutPanel1.TabIndex = 5;
-            this.flowLayoutPanel1.WrapContents = false;
-            this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
+            this.fpFoodList.AutoScroll = true;
+            this.fpFoodList.AutoScrollMinSize = new System.Drawing.Size(0, 567);
+            this.fpFoodList.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.fpFoodList.Location = new System.Drawing.Point(14, 196);
+            this.fpFoodList.Name = "fpFoodList";
+            this.fpFoodList.Size = new System.Drawing.Size(936, 567);
+            this.fpFoodList.TabIndex = 5;
+            this.fpFoodList.WrapContents = false;
+            this.fpFoodList.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
             // 
             // ListFoods
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.flowLayoutPanel1);
+            this.Controls.Add(this.fpFoodList);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.guna2TextBox1);
             this.Controls.Add(this.label1);
@@ -312,6 +312,6 @@
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.FlowLayoutPanel fpFoodList;
     }
 }

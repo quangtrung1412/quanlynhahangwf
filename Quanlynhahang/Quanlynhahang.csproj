@@ -64,6 +64,8 @@
     <Compile Include="DAO\IAccountDAO.cs" />
     <Compile Include="DAO\IFoodTypeDao.cs" />
     <Compile Include="DAO\Implements\AccountDAO.cs" />
+    <Compile Include="DAO\Implements\BillDAO.cs" />
+    <Compile Include="DAO\Implements\DeskDAO.cs" />
     <Compile Include="DAO\Implements\FoodDAO.cs" />
     <Compile Include="DAO\Implements\FoodTypeDao.cs" />
     <Compile Include="DAO\IDeskDAO.cs" />
@@ -73,6 +75,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Handle\DeleteFoodHandle.cs" />
+    <Compile Include="Handle\DeskHandle.cs" />
+    <Compile Include="Handle\EditFoodHandle.cs" />
+    <Compile Include="Handle\GetFoodByIdHandle.cs" />
+    <Compile Include="Handle\InsertFoodHandle.cs" />
+    <Compile Include="Handle\LoadListFoodHandle.cs" />
     <Compile Include="Handle\LoginHandle.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>

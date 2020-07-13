@@ -14,5 +14,6 @@ namespace Quanlynhahang.DAO
         bool UpdateFood(Food f);
         bool DeleteFood(string id);
         List<Food> SearchFoodByName(string name);
+        List<Food> GetFoodByFoodType(string id);
     }
 }

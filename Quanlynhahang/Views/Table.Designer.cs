@@ -28,33 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.DeskName = new System.Windows.Forms.Label();
+            this.DeskStatus = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // DeskName
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 10.2F);
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(31, 117);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(75, 23);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Bàn số 1";
+            this.DeskName.AutoSize = true;
+            this.DeskName.Font = new System.Drawing.Font("Segoe UI", 10.2F);
+            this.DeskName.ForeColor = System.Drawing.Color.White;
+            this.DeskName.Location = new System.Drawing.Point(31, 117);
+            this.DeskName.Name = "DeskName";
+            this.DeskName.Size = new System.Drawing.Size(75, 23);
+            this.DeskName.TabIndex = 1;
+            this.DeskName.Text = "Bàn số 1";
             // 
-            // label2
+            // DeskStatus
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 10.2F);
-            this.label2.ForeColor = System.Drawing.Color.Lime;
-            this.label2.Location = new System.Drawing.Point(28, 144);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(86, 23);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Bàn trống";
+            this.DeskStatus.AutoSize = true;
+            this.DeskStatus.Font = new System.Drawing.Font("Segoe UI", 10.2F);
+            this.DeskStatus.ForeColor = System.Drawing.Color.Lime;
+            this.DeskStatus.Location = new System.Drawing.Point(28, 144);
+            this.DeskStatus.Name = "DeskStatus";
+            this.DeskStatus.Size = new System.Drawing.Size(86, 23);
+            this.DeskStatus.TabIndex = 1;
+            this.DeskStatus.Text = "Bàn trống";
             // 
             // pictureBox1
             // 
@@ -71,8 +71,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Teal;
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.DeskStatus);
+            this.Controls.Add(this.DeskName);
             this.Controls.Add(this.pictureBox1);
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "Table";
@@ -86,7 +86,7 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label DeskName;
+        private System.Windows.Forms.Label DeskStatus;
     }
 }

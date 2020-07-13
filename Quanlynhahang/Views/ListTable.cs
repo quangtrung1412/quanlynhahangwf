@@ -23,7 +23,7 @@ namespace Quanlynhahang.Views
 
             }
         }
-
+    
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
@@ -55,14 +55,24 @@ namespace Quanlynhahang.Views
 
         private void CbTypeFood_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            string typeId = CbTypeFood.SelectedValue.ToString();
+            CbFood.DataSource = new FoodDAO().GetFoodByFoodType(typeId);
+            CbFood.ValueMember = "Id";
+            CbFood.DisplayMember = "Name";
         }
 
         private void ListTable_Load(object sender, EventArgs e)
         {
+            
+            //CbTypeFood
             CbTypeFood.DataSource = new FoodTypeDao().GetFoodType();
             CbTypeFood.ValueMember = "Id";
             CbTypeFood.DisplayMember = "Name";
+            //CbFood
+            string typeId = (string)CbTypeFood.SelectedValue;
+            CbFood.DataSource = new FoodDAO().GetFoodByFoodType(typeId);
+            CbFood.ValueMember = "Id";
+            CbFood.DisplayMember = "Name";
         }
     }
 }

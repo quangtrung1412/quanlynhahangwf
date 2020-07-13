@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.cbFoodType = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.numPrice = new Guna.UI2.WinForms.Guna2NumericUpDown();
             this.btnChangeFoodImage = new Guna.UI2.WinForms.Guna2Button();
             this.pbFoodImage = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.btnAddFood = new Guna.UI2.WinForms.Guna2Button();
@@ -42,8 +41,11 @@
             this.label3 = new System.Windows.Forms.Label();
             this.lbTitle = new System.Windows.Forms.Label();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
-            ((System.ComponentModel.ISupportInitialize)(this.numPrice)).BeginInit();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtFoodId = new Guna.UI2.WinForms.Guna2TextBox();
+            this.numPrice = new Guna.UI2.WinForms.Guna2NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.pbFoodImage)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numPrice)).BeginInit();
             this.SuspendLayout();
             // 
             // cbFoodType
@@ -59,31 +61,11 @@
             this.cbFoodType.HoverState.Parent = this.cbFoodType;
             this.cbFoodType.ItemHeight = 38;
             this.cbFoodType.ItemsAppearance.Parent = this.cbFoodType;
-            this.cbFoodType.Location = new System.Drawing.Point(226, 105);
+            this.cbFoodType.Location = new System.Drawing.Point(226, 128);
             this.cbFoodType.Name = "cbFoodType";
             this.cbFoodType.ShadowDecoration.Parent = this.cbFoodType;
             this.cbFoodType.Size = new System.Drawing.Size(267, 44);
             this.cbFoodType.TabIndex = 20;
-            // 
-            // numPrice
-            // 
-            this.numPrice.BackColor = System.Drawing.Color.Transparent;
-            this.numPrice.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.numPrice.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.numPrice.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.numPrice.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.numPrice.DisabledState.Parent = this.numPrice;
-            this.numPrice.DisabledState.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(177)))), ((int)(((byte)(177)))));
-            this.numPrice.DisabledState.UpDownButtonForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(203)))), ((int)(((byte)(203)))));
-            this.numPrice.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.numPrice.FocusedState.Parent = this.numPrice;
-            this.numPrice.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numPrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(126)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.numPrice.Location = new System.Drawing.Point(226, 313);
-            this.numPrice.Name = "numPrice";
-            this.numPrice.ShadowDecoration.Parent = this.numPrice;
-            this.numPrice.Size = new System.Drawing.Size(266, 44);
-            this.numPrice.TabIndex = 19;
             // 
             // btnChangeFoodImage
             // 
@@ -92,7 +74,7 @@
             this.btnChangeFoodImage.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnChangeFoodImage.ForeColor = System.Drawing.Color.White;
             this.btnChangeFoodImage.HoverState.Parent = this.btnChangeFoodImage;
-            this.btnChangeFoodImage.Location = new System.Drawing.Point(343, 407);
+            this.btnChangeFoodImage.Location = new System.Drawing.Point(343, 430);
             this.btnChangeFoodImage.Name = "btnChangeFoodImage";
             this.btnChangeFoodImage.ShadowDecoration.Parent = this.btnChangeFoodImage;
             this.btnChangeFoodImage.Size = new System.Drawing.Size(104, 36);
@@ -102,7 +84,7 @@
             // pbFoodImage
             // 
             this.pbFoodImage.Image = global::Quanlynhahang.Properties.Resources.foodpicture;
-            this.pbFoodImage.Location = new System.Drawing.Point(226, 372);
+            this.pbFoodImage.Location = new System.Drawing.Point(226, 395);
             this.pbFoodImage.Name = "pbFoodImage";
             this.pbFoodImage.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.pbFoodImage.ShadowDecoration.Parent = this.pbFoodImage;
@@ -118,7 +100,7 @@
             this.btnAddFood.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnAddFood.ForeColor = System.Drawing.Color.White;
             this.btnAddFood.HoverState.Parent = this.btnAddFood;
-            this.btnAddFood.Location = new System.Drawing.Point(313, 488);
+            this.btnAddFood.Location = new System.Drawing.Point(313, 511);
             this.btnAddFood.Name = "btnAddFood";
             this.btnAddFood.ShadowDecoration.Parent = this.btnAddFood;
             this.btnAddFood.Size = new System.Drawing.Size(180, 45);
@@ -138,7 +120,7 @@
             this.txtUnit.FocusedState.Parent = this.txtUnit;
             this.txtUnit.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtUnit.HoverState.Parent = this.txtUnit;
-            this.txtUnit.Location = new System.Drawing.Point(226, 242);
+            this.txtUnit.Location = new System.Drawing.Point(226, 265);
             this.txtUnit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtUnit.Name = "txtUnit";
             this.txtUnit.PasswordChar = '\0';
@@ -161,7 +143,7 @@
             this.txtFoodName.FocusedState.Parent = this.txtFoodName;
             this.txtFoodName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtFoodName.HoverState.Parent = this.txtFoodName;
-            this.txtFoodName.Location = new System.Drawing.Point(226, 174);
+            this.txtFoodName.Location = new System.Drawing.Point(226, 197);
             this.txtFoodName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtFoodName.Name = "txtFoodName";
             this.txtFoodName.PasswordChar = '\0';
@@ -175,7 +157,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(65, 400);
+            this.label2.Location = new System.Drawing.Point(65, 423);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(89, 23);
             this.label2.TabIndex = 7;
@@ -185,7 +167,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(65, 315);
+            this.label6.Location = new System.Drawing.Point(65, 338);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(44, 23);
             this.label6.TabIndex = 8;
@@ -195,7 +177,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(65, 252);
+            this.label5.Location = new System.Drawing.Point(65, 275);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(68, 23);
             this.label5.TabIndex = 9;
@@ -205,7 +187,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(65, 186);
+            this.label4.Location = new System.Drawing.Point(65, 209);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(109, 23);
             this.label4.TabIndex = 10;
@@ -215,7 +197,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(65, 117);
+            this.label3.Location = new System.Drawing.Point(65, 140);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(114, 23);
             this.label3.TabIndex = 11;
@@ -224,7 +206,7 @@
             // lbTitle
             // 
             this.lbTitle.Font = new System.Drawing.Font("Arial Narrow", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTitle.Location = new System.Drawing.Point(0, 9);
+            this.lbTitle.Location = new System.Drawing.Point(-1, 9);
             this.lbTitle.Name = "lbTitle";
             this.lbTitle.Size = new System.Drawing.Size(585, 45);
             this.lbTitle.TabIndex = 21;
@@ -243,6 +225,59 @@
             this.guna2ControlBox1.Size = new System.Drawing.Size(45, 29);
             this.guna2ControlBox1.TabIndex = 22;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(65, 71);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(107, 23);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "Mã món ăn :";
+            // 
+            // txtFoodId
+            // 
+            this.txtFoodId.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtFoodId.DefaultText = "";
+            this.txtFoodId.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtFoodId.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtFoodId.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtFoodId.DisabledState.Parent = this.txtFoodId;
+            this.txtFoodId.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtFoodId.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtFoodId.FocusedState.Parent = this.txtFoodId;
+            this.txtFoodId.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtFoodId.HoverState.Parent = this.txtFoodId;
+            this.txtFoodId.Location = new System.Drawing.Point(225, 58);
+            this.txtFoodId.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtFoodId.Name = "txtFoodId";
+            this.txtFoodId.PasswordChar = '\0';
+            this.txtFoodId.PlaceholderText = "";
+            this.txtFoodId.SelectedText = "";
+            this.txtFoodId.ShadowDecoration.Parent = this.txtFoodId;
+            this.txtFoodId.Size = new System.Drawing.Size(267, 44);
+            this.txtFoodId.TabIndex = 14;
+            // 
+            // numPrice
+            // 
+            this.numPrice.BackColor = System.Drawing.Color.Transparent;
+            this.numPrice.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.numPrice.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.numPrice.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.numPrice.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.numPrice.DisabledState.Parent = this.numPrice;
+            this.numPrice.DisabledState.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(177)))), ((int)(((byte)(177)))));
+            this.numPrice.DisabledState.UpDownButtonForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(203)))), ((int)(((byte)(203)))));
+            this.numPrice.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.numPrice.FocusedState.Parent = this.numPrice;
+            this.numPrice.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numPrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(126)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.numPrice.Location = new System.Drawing.Point(226, 336);
+            this.numPrice.Name = "numPrice";
+            this.numPrice.ShadowDecoration.Parent = this.numPrice;
+            this.numPrice.Size = new System.Drawing.Size(266, 44);
+            this.numPrice.TabIndex = 19;
+            // 
             // FormFood
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -255,10 +290,12 @@
             this.Controls.Add(this.pbFoodImage);
             this.Controls.Add(this.btnAddFood);
             this.Controls.Add(this.txtUnit);
+            this.Controls.Add(this.txtFoodId);
             this.Controls.Add(this.txtFoodName);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -268,8 +305,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "FormFood";
             this.Load += new System.EventHandler(this.FormFood_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.numPrice)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbFoodImage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numPrice)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -278,7 +315,6 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2ComboBox cbFoodType;
-        private Guna.UI2.WinForms.Guna2NumericUpDown numPrice;
         private Guna.UI2.WinForms.Guna2Button btnChangeFoodImage;
         private Guna.UI2.WinForms.Guna2CirclePictureBox pbFoodImage;
         private Guna.UI2.WinForms.Guna2Button btnAddFood;
@@ -291,5 +327,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lbTitle;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
+        private System.Windows.Forms.Label label1;
+        private Guna.UI2.WinForms.Guna2TextBox txtFoodId;
+        private Guna.UI2.WinForms.Guna2NumericUpDown numPrice;
     }
 }

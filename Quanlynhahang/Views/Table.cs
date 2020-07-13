@@ -15,6 +15,10 @@ namespace Quanlynhahang.Views
         {
             InitializeComponent();
         }
+        public Table(string id , string name , int status)
+        {
+            InitializeComponent();
+        }
         public void TableClick(EventHandler e)
         {
             this.Click += e;

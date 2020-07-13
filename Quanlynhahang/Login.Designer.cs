@@ -138,6 +138,7 @@
             this.txtUserName.ShadowDecoration.Parent = this.txtUserName;
             this.txtUserName.Size = new System.Drawing.Size(267, 44);
             this.txtUserName.TabIndex = 4;
+            this.txtUserName.TextOffset = new System.Drawing.Point(10, 0);
             // 
             // txtPass
             // 
@@ -163,6 +164,7 @@
             this.txtPass.ShadowDecoration.Parent = this.txtPass;
             this.txtPass.Size = new System.Drawing.Size(267, 44);
             this.txtPass.TabIndex = 5;
+            this.txtPass.TextOffset = new System.Drawing.Point(10, 0);
             // 
             // guna2GradientButton1
             // 
