@@ -7,5 +7,6 @@ namespace Quanlynhahang.Handle
 {
     class DeskHandle
     {
+
     }
 }

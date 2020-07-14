@@ -127,7 +127,6 @@
             this.txtSearchFood.ShadowDecoration.Parent = this.txtSearchFood;
             this.txtSearchFood.Size = new System.Drawing.Size(289, 40);
             this.txtSearchFood.TabIndex = 2;
-            this.txtSearchFood.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSearchFood_KeyPress);
             // 
             // panel2
             // 
@@ -282,6 +281,7 @@
             this.BtnSearch.TabIndex = 6;
             this.BtnSearch.Text = "Tìm";
             this.BtnSearch.Click += new System.EventHandler(this.BtnSearch_Click);
+            this.BtnSearch.KeyUp += new System.Windows.Forms.KeyEventHandler(this.BtnSearch_KeyUp);
             // 
             // ListFoods
             // 

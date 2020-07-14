@@ -30,7 +30,7 @@ namespace Quanlynhahang.DAO.Implements
             var resultSet = db.Usp_GetAllDesk().ToList();
             if (resultSet.Count > 0)
             {
-                Desk d;
+                Desk d = new Desk();
                 foreach(var u in resultSet)
                 {
                     d = new Desk();

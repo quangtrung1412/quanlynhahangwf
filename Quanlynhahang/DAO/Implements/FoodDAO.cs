@@ -18,15 +18,15 @@ namespace Quanlynhahang.DAO.Implements
 
         public bool  DeleteFood(string id)
         {
-            bool bl;
+            
             int i = db.Usp_DeleteFood(id);
             if (i == 1)
             {
-                return  bl=true;
+                return  true;
             }
             else
             {
-                return bl = false;
+                return false;
             }
         }
 

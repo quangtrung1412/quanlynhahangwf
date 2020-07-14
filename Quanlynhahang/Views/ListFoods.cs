@@ -17,6 +17,7 @@ namespace Quanlynhahang.Views
         private Form1 form;
         public FormFood FormFood { get; set; } = null;
         public Foods Foods { get; set; } = null;
+        public List<Food> ListFood = new List<Food>();
         public ListFoods()
         {
             InitializeComponent();
@@ -46,6 +47,10 @@ namespace Quanlynhahang.Views
         //DisplayFoodlist
         public void DisplayFoodList(List<Food> list)
         {
+            if(ListFood.Count == 0)
+            {
+                ListFood = list;
+            }
             this.fpFoodList.Controls.Clear();
             foreach (var f in list)
             {
@@ -111,19 +116,23 @@ namespace Quanlynhahang.Views
             FormFood = null;
         }
         //SearchFood
-        public string GetNameSearch()
+        /*public string GetNameSearch()
         {
-            string name = txtSearchFood.Text.Trim();           
-            return name;
-        }
-        public void txtSearchFood_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            
-        }
+            //return name;
+        }*/
+        
 
         private void BtnSearch_Click(object sender, EventArgs e)
         {
-            GetNameSearch();
+            string name = txtSearchFood.Text.Trim();
+            new SearchFoodByNameHandel(this).Handle(name);
+
+        }
+
+        private void BtnSearch_KeyUp(object sender, KeyEventArgs e)
+        {
+            string name = txtSearchFood.Text.Trim();
+            new SearchFoodByNameHandel(this).Handle(name);
         }
     }
 }

@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Windows.Forms;
 
 namespace Quanlynhahang.Handle
 {
@@ -16,22 +17,16 @@ namespace Quanlynhahang.Handle
         {
             this.listFoods = listFoods;
         }
-        public void Handel(Object sender,EventArgs e)
+        public void Handle(string name)
         {
-            string name=listFoods.GetNameSearch();
-
-            if (name.Length == 0)
+            if(name.Length > 0)
             {
-                List<Food> l = new FoodDAO().GetAllFood();
-                listFoods.DisplayFoodList(l);
-            }
-            else
-            {
-
                 List<Food> list = new FoodDAO().SearchFoodByName(name);
                 listFoods.DisplayFoodList(list);
+            } else
+            {
+                listFoods.DisplayFoodList(listFoods.ListFood);
             }
-
-        }
+        } 
     }
 }

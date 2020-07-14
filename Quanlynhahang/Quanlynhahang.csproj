@@ -75,6 +75,7 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Handle\ChangeStateClick.cs" />
     <Compile Include="Handle\DeleteFoodHandle.cs" />
     <Compile Include="Handle\DeskHandle.cs" />
     <Compile Include="Handle\EditFoodHandle.cs" />
@@ -413,6 +414,7 @@
     <None Include="Resources\pngtree-vector-users-icon-png-image_8569523.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="bin\Debug\Images\icons8-menu-vertical-60.png" />
     <Content Include="Models\QuanLyNhaHang.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>QuanLyNhaHang.edmx</DependentUpon>

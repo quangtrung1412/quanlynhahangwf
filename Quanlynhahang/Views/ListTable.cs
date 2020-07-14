@@ -8,11 +8,13 @@ using System.Text;
 using System.Windows.Forms;
 using Quanlynhahang.DAO.Implements;
 using Quanlynhahang.Models;
+using Quanlynhahang.Handle;
 
 namespace Quanlynhahang.Views
 {
     public partial class ListTable : UserControl
     {
+        public List<Desk> listDesk = new List<Desk>();
         public ListTable()
         {
             InitializeComponent();
@@ -58,6 +60,7 @@ namespace Quanlynhahang.Views
 
         private void ListTable_Load(object sender, EventArgs e)
         {
+            new LoadDeskHandle(this).Handle();
             
             //CbTypeFood
             CbTypeFood.DataSource = new FoodTypeDao().GetFoodType();
@@ -72,12 +75,21 @@ namespace Quanlynhahang.Views
         //DisplayDesk
         public void DisplayDeskList ( List<Desk> list)
         {
+            if(listDesk.Count == 0)
+            {
+                listDesk = list;
+            }
             this.DeskList.Controls.Clear();
             foreach(var d in list)
             {
-                Views.Table table = new Views.Table(d.Id, d.Name,d.Status);
+                Views.Table table = new Views.Table(d.Id, d.Name,(byte)d.Status);
+                table.ChangeStateClick(new ChangeStateClick(this, d).Handle);
                 this.DeskList.Controls.Add(table);
             }
+        }
+        public void ChangeState(Desk d)
+        {
+
         }
         
     }
