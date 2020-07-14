@@ -72,7 +72,10 @@ go
 insert into Bill(Id,DeskId,AccountId,Total) values('B001','D001',1,1000000),('B002','D002',1,1000000),('B003','D003',1,1000000),('B004','D004',1,1000000),
 ('B005','D005',1,1000000),('B006','D006',1,1000000),('B007','D007',1,1000000),('B008','D008',1,1000000),('B009','D009',1,1000000),('B010','D010',1,1000000)
 go
-
+--insert Food
+insert into Food(Id,TypeId,Name,Price,Unit) values('F001','1',N'Bún Đậu',30000,N'Đĩa'),('F002','1',N'Bún Canh',30000,N'Bát'),('F003','1',N'Bánh Cuốn',30000,N'Đĩa'),
+('F004','1',N'Bánh Đa Cua',35000,N'Bát'),('F005','2',N'Coca',10000,N'lon'),('F006','3',N'Bánh Ngọt',10000,N'chiếc')
+go
 --Account
 create proc Usp_GetAccountByLoginInfo(@email AS Varchar(50), @password AS VARCHAR(100))
 AS
@@ -110,9 +113,12 @@ go
 create proc Usp_GetAllBill (@from as datetime , @to as datetime ) as SELECT Bill.*, Desk.Name , Account.Name FROM ((Bill 
 inner join Desk on Bill.DeskId =Desk.Id) inner join Account on Bill.AccountId=Account.Id) where Bill.CreatedAt between @from AND @to
 go
-Create proc Usp_GetAllBillDetail(@billId as varchar(30)) as SELECT BillDetail.* , Food.Name 
+Create proc Usp_GetAllBillDetailByBillDetail(@billId as varchar(30)) as SELECT BillDetail.* , Food.Name 
 From BillDetail inner join Food on BillDetail.FoodId=Food.Id where BillId = @billId
 go
+Create proc Usp_GetAllBillDetail as SELECT *From BillDetail
+go
+
 --Desk 
 create proc Usp_GetAllDesk as SELECT * FROM Desk
 go

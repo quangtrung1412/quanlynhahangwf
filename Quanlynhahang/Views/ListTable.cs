@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using Quanlynhahang.DAO.Implements;
+using Quanlynhahang.Models;
 
 namespace Quanlynhahang.Views
 {
@@ -15,13 +16,7 @@ namespace Quanlynhahang.Views
         public ListTable()
         {
             InitializeComponent();
-            for (int i = 0; i < 10; i++)
-            {
-                Views.Table tb = new Views.Table();
-                this.flowLayoutPanel1.Controls.Add(tb);
-                tb.TableClick(handle);
-
-            }
+            
         }
     
         private void panel2_Paint(object sender, PaintEventArgs e)
@@ -74,5 +69,16 @@ namespace Quanlynhahang.Views
             CbFood.ValueMember = "Id";
             CbFood.DisplayMember = "Name";
         }
+        //DisplayDesk
+        public void DisplayDeskList ( List<Desk> list)
+        {
+            this.DeskList.Controls.Clear();
+            foreach(var d in list)
+            {
+                Views.Table table = new Views.Table(d.Id, d.Name,d.Status);
+                this.DeskList.Controls.Add(table);
+            }
+        }
+        
     }
 }

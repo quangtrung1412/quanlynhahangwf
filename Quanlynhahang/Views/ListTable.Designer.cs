@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.DeskList = new System.Windows.Forms.FlowLayoutPanel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -46,6 +46,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.TxtTotal = new System.Windows.Forms.TextBox();
+            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             this.BtnPay = new Guna.UI2.WinForms.Guna2Button();
             this.TblBillDetail = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -55,8 +56,7 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
-            this.flowLayoutPanel1.SuspendLayout();
+            this.DeskList.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -67,14 +67,14 @@
             this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
-            // flowLayoutPanel1
+            // DeskList
             // 
-            this.flowLayoutPanel1.Controls.Add(this.panel7);
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(600, 780);
-            this.flowLayoutPanel1.TabIndex = 0;
+            this.DeskList.Controls.Add(this.panel7);
+            this.DeskList.Dock = System.Windows.Forms.DockStyle.Left;
+            this.DeskList.Location = new System.Drawing.Point(0, 0);
+            this.DeskList.Name = "DeskList";
+            this.DeskList.Size = new System.Drawing.Size(600, 780);
+            this.DeskList.TabIndex = 0;
             // 
             // panel7
             // 
@@ -285,6 +285,20 @@
             this.TxtTotal.Size = new System.Drawing.Size(186, 31);
             this.TxtTotal.TabIndex = 2;
             // 
+            // guna2Button2
+            // 
+            this.guna2Button2.CheckedState.Parent = this.guna2Button2;
+            this.guna2Button2.CustomImages.Parent = this.guna2Button2;
+            this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button2.ForeColor = System.Drawing.Color.White;
+            this.guna2Button2.HoverState.Parent = this.guna2Button2;
+            this.guna2Button2.Location = new System.Drawing.Point(8, 495);
+            this.guna2Button2.Name = "guna2Button2";
+            this.guna2Button2.ShadowDecoration.Parent = this.guna2Button2;
+            this.guna2Button2.Size = new System.Drawing.Size(145, 48);
+            this.guna2Button2.TabIndex = 5;
+            this.guna2Button2.Text = "Thêm bàn";
+            // 
             // BtnPay
             // 
             this.BtnPay.CheckedState.Parent = this.BtnPay;
@@ -367,31 +381,17 @@
             this.label6.TabIndex = 0;
             this.label6.Text = "Tổng tiền :";
             // 
-            // guna2Button2
-            // 
-            this.guna2Button2.CheckedState.Parent = this.guna2Button2;
-            this.guna2Button2.CustomImages.Parent = this.guna2Button2;
-            this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button2.ForeColor = System.Drawing.Color.White;
-            this.guna2Button2.HoverState.Parent = this.guna2Button2;
-            this.guna2Button2.Location = new System.Drawing.Point(8, 495);
-            this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.ShadowDecoration.Parent = this.guna2Button2;
-            this.guna2Button2.Size = new System.Drawing.Size(145, 48);
-            this.guna2Button2.TabIndex = 5;
-            this.guna2Button2.Text = "Thêm bàn";
-            // 
             // ListTable
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.flowLayoutPanel1);
+            this.Controls.Add(this.DeskList);
             this.Name = "ListTable";
             this.Size = new System.Drawing.Size(960, 780);
             this.Load += new System.EventHandler(this.ListTable_Load);
-            this.flowLayoutPanel1.ResumeLayout(false);
+            this.DeskList.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -412,7 +412,7 @@
 
         #endregion
 
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.FlowLayoutPanel DeskList;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel3;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;

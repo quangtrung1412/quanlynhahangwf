@@ -263,6 +263,16 @@ namespace Quanlynhahang.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap pngtree_vector_users_icon_png_image_8569523 {
+            get {
+                object obj = ResourceManager.GetObject("pngtree-vector-users-icon-png-image_8569523", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap restaurant_table_32px {
             get {
                 object obj = ResourceManager.GetObject("restaurant_table_32px", resourceCulture);

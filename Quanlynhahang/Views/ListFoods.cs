@@ -16,7 +16,7 @@ namespace Quanlynhahang.Views
     {
         private Form1 form;
         public FormFood FormFood { get; set; } = null;
-        
+        public Foods Foods { get; set; } = null;
         public ListFoods()
         {
             InitializeComponent();
@@ -43,6 +43,7 @@ namespace Quanlynhahang.Views
         {
 
         }
+        //DisplayFoodlist
         public void DisplayFoodList(List<Food> list)
         {
             this.fpFoodList.Controls.Clear();
@@ -51,6 +52,7 @@ namespace Quanlynhahang.Views
                 Views.Foods food = new Views.Foods(f.Id, f.Name, f.Unit, f.Price, f.Picture);
 
                 food.BtnDeleteFoodClick(new DeleteFoodHandle(this, f).Handle);
+                food.BtnEditFoodClick(new GetFoodByIdHandle(this, f).Handle);
                 this.fpFoodList.Controls.Add(food);
                 this.Refresh();
             }
@@ -79,6 +81,7 @@ namespace Quanlynhahang.Views
         {
             Views.Foods food = new Views.Foods(f.Id, f.Name, f.Unit, f.Price, f.Picture);
             food.BtnDeleteFoodClick(new DeleteFoodHandle(this, f).Handle);
+            food.BtnEditFoodClick(new GetFoodByIdHandle(this, f).Handle);
             this.fpFoodList.Controls.Add(food);
             this.Refresh();
         }
@@ -86,18 +89,41 @@ namespace Quanlynhahang.Views
         {
             MessageBox.Show("Thêm không thành công");
         }
+        public void DisplayErrorEditFood()
+        {
+            MessageBox.Show("Sửa không thành công");
+        }
         public void CloseFormFood()
         {
             FormFood.Dispose();
             FormFood = null;
         }
         //EditFood
-        public void BtnEditFood_Click(object sender, EventArgs e)
+        public void DisplayEditFood(Food food)
         {
             Overlay overlay = new Overlay();
             overlay.Location = new Point(form.Location.X + 150, form.Location.Y + 26);
             overlay.Show();
-                  
+            FormFood = new FormFood(food);
+            FormFood.BtnAddFoodClick(new EditFoodHandle(this).Handle);
+            FormFood.ShowDialog();
+            overlay.Dispose();
+            FormFood = null;
+        }
+        //SearchFood
+        public string GetNameSearch()
+        {
+            string name = txtSearchFood.Text.Trim();           
+            return name;
+        }
+        public void txtSearchFood_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            
+        }
+
+        private void BtnSearch_Click(object sender, EventArgs e)
+        {
+            GetNameSearch();
         }
     }
 }

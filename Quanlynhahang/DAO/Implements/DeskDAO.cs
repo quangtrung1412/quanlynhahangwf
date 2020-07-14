@@ -15,7 +15,13 @@ namespace Quanlynhahang.DAO.Implements
         }
         public bool DeleteDesk(string id)
         {
-            throw new NotImplementedException();
+            int i = db.Usp_DeleteDesk(id);
+            if (i == 1)
+            {
+                return true;
+            }
+            return false;
+
         }
 
         public List<Desk> GetAllTable()
@@ -39,12 +45,22 @@ namespace Quanlynhahang.DAO.Implements
 
         public bool InsertDesk(Desk d)
         {
-            throw new NotImplementedException();
+            int i = db.Usp_InsertDesk(d.Id,d.Name,d.Status);
+            if (i == 1)
+            {
+                return true;
+            }
+            return false;
         }
 
         public bool UpdateDesk(Desk d)
         {
-            throw new NotImplementedException();
+            int i = db.Usp_InsertDesk(d.Id, d.Name, d.Status);
+            if (i == 1)
+            {
+                return true;
+            }
+            return false;
         }
     }
 }

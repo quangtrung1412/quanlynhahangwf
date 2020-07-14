@@ -78,13 +78,18 @@ namespace Quanlynhahang.Models
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Usp_GetAllBill_Result>("Usp_GetAllBill", fromParameter, toParameter);
         }
     
-        public virtual ObjectResult<Usp_GetAllBillDetail_Result> Usp_GetAllBillDetail(string billId)
+        public virtual ObjectResult<Usp_GetAllBillDetail_Result> Usp_GetAllBillDetail()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Usp_GetAllBillDetail_Result>("Usp_GetAllBillDetail");
+        }
+    
+        public virtual ObjectResult<Usp_GetAllBillDetailByBillDetail_Result> Usp_GetAllBillDetailByBillDetail(string billId)
         {
             var billIdParameter = billId != null ?
                 new ObjectParameter("billId", billId) :
                 new ObjectParameter("billId", typeof(string));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Usp_GetAllBillDetail_Result>("Usp_GetAllBillDetail", billIdParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Usp_GetAllBillDetailByBillDetail_Result>("Usp_GetAllBillDetailByBillDetail", billIdParameter);
         }
     
         public virtual ObjectResult<Usp_GetAllDesk_Result> Usp_GetAllDesk()

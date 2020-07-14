@@ -49,11 +49,12 @@ namespace Quanlynhahang.Views
         public void BtnEditFoodClick(EventHandler e)
         {
             this.BtnEditFood.Click += e;
+            
         }
 
         private void BtnEditFood_Click(object sender, EventArgs e)
         {
-
+           
         }
     }
 }

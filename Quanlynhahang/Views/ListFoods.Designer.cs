@@ -32,7 +32,7 @@
             this.btnAddFood = new Guna.UI2.WinForms.Guna2Button();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.label1 = new System.Windows.Forms.Label();
-            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtSearchFood = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
@@ -46,6 +46,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.fpFoodList = new System.Windows.Forms.FlowLayoutPanel();
+            this.BtnSearch = new Guna.UI2.WinForms.Guna2Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -68,6 +69,7 @@
             // 
             // btnAddFood
             // 
+            this.btnAddFood.BorderRadius = 20;
             this.btnAddFood.CheckedState.Parent = this.btnAddFood;
             this.btnAddFood.CustomImages.Parent = this.btnAddFood;
             this.btnAddFood.Font = new System.Drawing.Font("Segoe UI", 9F);
@@ -96,34 +98,36 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.label1.Location = new System.Drawing.Point(536, 84);
+            this.label1.Location = new System.Drawing.Point(443, 90);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(70, 23);
             this.label1.TabIndex = 1;
             this.label1.Text = "Search :";
             // 
-            // guna2TextBox1
+            // txtSearchFood
             // 
-            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox1.DefaultText = "";
-            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.DisabledState.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.FocusedState.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.HoverState.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.Location = new System.Drawing.Point(640, 70);
-            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.guna2TextBox1.Name = "guna2TextBox1";
-            this.guna2TextBox1.PasswordChar = '\0';
-            this.guna2TextBox1.PlaceholderText = "";
-            this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.ShadowDecoration.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.Size = new System.Drawing.Size(298, 44);
-            this.guna2TextBox1.TabIndex = 2;
+            this.txtSearchFood.BorderRadius = 20;
+            this.txtSearchFood.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtSearchFood.DefaultText = "";
+            this.txtSearchFood.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtSearchFood.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtSearchFood.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSearchFood.DisabledState.Parent = this.txtSearchFood;
+            this.txtSearchFood.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSearchFood.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSearchFood.FocusedState.Parent = this.txtSearchFood;
+            this.txtSearchFood.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSearchFood.HoverState.Parent = this.txtSearchFood;
+            this.txtSearchFood.Location = new System.Drawing.Point(532, 80);
+            this.txtSearchFood.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSearchFood.Name = "txtSearchFood";
+            this.txtSearchFood.PasswordChar = '\0';
+            this.txtSearchFood.PlaceholderText = "";
+            this.txtSearchFood.SelectedText = "";
+            this.txtSearchFood.ShadowDecoration.Parent = this.txtSearchFood;
+            this.txtSearchFood.Size = new System.Drawing.Size(289, 40);
+            this.txtSearchFood.TabIndex = 2;
+            this.txtSearchFood.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSearchFood_KeyPress);
             // 
             // panel2
             // 
@@ -263,13 +267,30 @@
             this.fpFoodList.WrapContents = false;
             this.fpFoodList.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
             // 
+            // BtnSearch
+            // 
+            this.BtnSearch.BorderRadius = 20;
+            this.BtnSearch.CheckedState.Parent = this.BtnSearch;
+            this.BtnSearch.CustomImages.Parent = this.BtnSearch;
+            this.BtnSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.BtnSearch.ForeColor = System.Drawing.Color.White;
+            this.BtnSearch.HoverState.Parent = this.BtnSearch;
+            this.BtnSearch.Location = new System.Drawing.Point(840, 80);
+            this.BtnSearch.Name = "BtnSearch";
+            this.BtnSearch.ShadowDecoration.Parent = this.BtnSearch;
+            this.BtnSearch.Size = new System.Drawing.Size(110, 40);
+            this.BtnSearch.TabIndex = 6;
+            this.BtnSearch.Text = "Tìm";
+            this.BtnSearch.Click += new System.EventHandler(this.BtnSearch_Click);
+            // 
             // ListFoods
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.BtnSearch);
             this.Controls.Add(this.fpFoodList);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.guna2TextBox1);
+            this.Controls.Add(this.txtSearchFood);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.Name = "ListFoods";
@@ -299,7 +320,7 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2Button btnAddFood;
         private System.Windows.Forms.Label label1;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
+        private Guna.UI2.WinForms.Guna2TextBox txtSearchFood;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label2;
@@ -313,5 +334,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.FlowLayoutPanel fpFoodList;
+        private Guna.UI2.WinForms.Guna2Button BtnSearch;
     }
 }

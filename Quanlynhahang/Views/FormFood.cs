@@ -29,7 +29,7 @@ namespace Quanlynhahang.Views
             this.txtFoodName.Text = food.Name;
             this.numPrice.Value = food.Price;
             this.txtUnit.Text = food.Unit;
-
+            
         }
         private void FormFood_Load(object sender, EventArgs e)
         {
@@ -44,12 +44,34 @@ namespace Quanlynhahang.Views
         }
         public Food GetFood()
         {
+            
             int i = 0;
             Food f = new Food();
             f.Id = "food" + DateTime.Now.ToUniversalTime().Subtract(new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc)).TotalMilliseconds;
+            f.TypeId = cbFoodType.SelectedValue.ToString();
             f.Name = txtFoodName.Text.Trim();
             f.Price = (int)numPrice.Value;
+            f.Unit = txtUnit.Text.Trim();
+            f.Picture = "foodpicture.png";
+            if (f.Name.Length == 0 || f.Unit.Length == 0)
+            {
+                MessageBox.Show("Vui lòng điền đầy đủ thông tin!");
+                i = 1;
+            }
+            if (i == 0)
+            {
+                return f;
+            }
+            return null;
+        }
+        public Food GetFoodUpdate()
+        {
+            int i = 0;
+            Food f = new Food();
+            f.Id = txtFoodId.Text.Trim();
             f.TypeId = cbFoodType.SelectedValue.ToString();
+            f.Name = txtFoodName.Text.Trim();
+            f.Price = (int)numPrice.Value;
             f.Unit = txtUnit.Text.Trim();
             f.Picture = "foodpicture.png";
             if (f.Name.Length == 0 || f.Unit.Length == 0)

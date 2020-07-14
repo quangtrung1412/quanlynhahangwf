@@ -80,8 +80,10 @@
     <Compile Include="Handle\EditFoodHandle.cs" />
     <Compile Include="Handle\GetFoodByIdHandle.cs" />
     <Compile Include="Handle\InsertFoodHandle.cs" />
+    <Compile Include="Handle\LoadDeskHandle.cs" />
     <Compile Include="Handle\LoadListFoodHandle.cs" />
     <Compile Include="Handle\LoginHandle.cs" />
+    <Compile Include="Handle\SearchFoodByNameHandel.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -122,6 +124,9 @@
       <DependentUpon>QuanLyNhaHang.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\Usp_GetAccountByLoginInfo_Result.cs">
+      <DependentUpon>QuanLyNhaHang.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Usp_GetAllBillDetailByBillDetail_Result.cs">
       <DependentUpon>QuanLyNhaHang.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Usp_GetAllBillDetail_Result.cs">
@@ -403,6 +408,9 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngtree-vector-users-icon-png-image_8569523.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Models\QuanLyNhaHang.Context.tt">

@@ -15,9 +15,11 @@ namespace Quanlynhahang.Views
         {
             InitializeComponent();
         }
-        public Table(string id , string name , int status)
+        public Table(string id , string name , byte? status)
         {
             InitializeComponent();
+            DeskName.Text = name;
+
         }
         public void TableClick(EventHandler e)
         {

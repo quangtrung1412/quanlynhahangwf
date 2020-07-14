@@ -20,6 +20,7 @@ namespace Quanlynhahang.Handle
         }
         public void Handle(object sender ,EventArgs e)
         {
+            listFood.DisplayEditFood(food);
             List<Food> list = new FoodDAO().GetFoodById(food.Id); 
         }
     }

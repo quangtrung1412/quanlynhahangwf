@@ -18,7 +18,8 @@ namespace Quanlynhahang.Handle
         }
         public void Handle(object sender, EventArgs e)
         {
-            Food f = listFood.FormFood.GetFood();
+            Food f = listFood.FormFood.GetFoodUpdate();
+           //System.Windows.Forms.MessageBox.Show(f.Id);
             if (f != null)
             {
                 bool b = new FoodDAO().UpdateFood(f);
@@ -29,7 +30,7 @@ namespace Quanlynhahang.Handle
                 }
                 else
                 {
-                    listFood.DisplayErrorAddFood();
+                    listFood.DisplayErrorEditFood();
                 }
             }
         }

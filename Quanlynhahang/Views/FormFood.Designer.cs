@@ -39,11 +39,11 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.lbTitle = new System.Windows.Forms.Label();
+            this.LbTitle = new System.Windows.Forms.Label();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtFoodId = new Guna.UI2.WinForms.Guna2TextBox();
-            this.numPrice = new Guna.UI2.WinForms.Guna2NumericUpDown();
+            this.numPrice = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.pbFoodImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numPrice)).BeginInit();
             this.SuspendLayout();
@@ -167,7 +167,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(65, 338);
+            this.label6.Location = new System.Drawing.Point(65, 346);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(44, 23);
             this.label6.TabIndex = 8;
@@ -203,15 +203,15 @@
             this.label3.TabIndex = 11;
             this.label3.Text = "Loại món ăn :";
             // 
-            // lbTitle
+            // LbTitle
             // 
-            this.lbTitle.Font = new System.Drawing.Font("Arial Narrow", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTitle.Location = new System.Drawing.Point(-1, 9);
-            this.lbTitle.Name = "lbTitle";
-            this.lbTitle.Size = new System.Drawing.Size(585, 45);
-            this.lbTitle.TabIndex = 21;
-            this.lbTitle.Text = "Thêm Thức Ăn";
-            this.lbTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LbTitle.Font = new System.Drawing.Font("Arial Narrow", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LbTitle.Location = new System.Drawing.Point(-1, 9);
+            this.LbTitle.Name = "LbTitle";
+            this.LbTitle.Size = new System.Drawing.Size(585, 45);
+            this.LbTitle.TabIndex = 21;
+            this.LbTitle.Text = "Thêm Thức Ăn";
+            this.LbTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // guna2ControlBox1
             // 
@@ -244,6 +244,7 @@
             this.txtFoodId.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtFoodId.DisabledState.Parent = this.txtFoodId;
             this.txtFoodId.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtFoodId.Enabled = false;
             this.txtFoodId.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtFoodId.FocusedState.Parent = this.txtFoodId;
             this.txtFoodId.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -260,32 +261,25 @@
             // 
             // numPrice
             // 
-            this.numPrice.BackColor = System.Drawing.Color.Transparent;
-            this.numPrice.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.numPrice.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.numPrice.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.numPrice.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.numPrice.DisabledState.Parent = this.numPrice;
-            this.numPrice.DisabledState.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(177)))), ((int)(((byte)(177)))));
-            this.numPrice.DisabledState.UpDownButtonForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(203)))), ((int)(((byte)(203)))));
-            this.numPrice.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.numPrice.FocusedState.Parent = this.numPrice;
-            this.numPrice.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numPrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(126)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.numPrice.Location = new System.Drawing.Point(226, 336);
+            this.numPrice.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numPrice.Location = new System.Drawing.Point(225, 336);
+            this.numPrice.Maximum = new decimal(new int[] {
+            1000000,
+            0,
+            0,
+            0});
             this.numPrice.Name = "numPrice";
-            this.numPrice.ShadowDecoration.Parent = this.numPrice;
-            this.numPrice.Size = new System.Drawing.Size(266, 44);
-            this.numPrice.TabIndex = 19;
+            this.numPrice.Size = new System.Drawing.Size(267, 30);
+            this.numPrice.TabIndex = 23;
             // 
             // FormFood
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(584, 570);
-            this.Controls.Add(this.guna2ControlBox1);
-            this.Controls.Add(this.lbTitle);
-            this.Controls.Add(this.cbFoodType);
             this.Controls.Add(this.numPrice);
+            this.Controls.Add(this.guna2ControlBox1);
+            this.Controls.Add(this.LbTitle);
+            this.Controls.Add(this.cbFoodType);
             this.Controls.Add(this.btnChangeFoodImage);
             this.Controls.Add(this.pbFoodImage);
             this.Controls.Add(this.btnAddFood);
@@ -325,10 +319,10 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label lbTitle;
+        private System.Windows.Forms.Label LbTitle;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2TextBox txtFoodId;
-        private Guna.UI2.WinForms.Guna2NumericUpDown numPrice;
+        private System.Windows.Forms.NumericUpDown numPrice;
     }
 }

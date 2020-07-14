@@ -137,7 +137,8 @@
           <Parameter Name="from" Type="datetime" Mode="In" />
           <Parameter Name="to" Type="datetime" Mode="In" />
         </Function>
-        <Function Name="Usp_GetAllBillDetail" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+        <Function Name="Usp_GetAllBillDetail" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="Usp_GetAllBillDetailByBillDetail" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="billId" Type="varchar" Mode="In" />
         </Function>
         <Function Name="Usp_GetAllDesk" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
@@ -385,7 +386,8 @@
             <Parameter Name="from" Mode="In" Type="DateTime" />
             <Parameter Name="to" Mode="In" Type="DateTime" />
           </FunctionImport>
-          <FunctionImport Name="Usp_GetAllBillDetail" ReturnType="Collection(QuanLyNhaHangModel.Usp_GetAllBillDetail_Result)">
+          <FunctionImport Name="Usp_GetAllBillDetail" ReturnType="Collection(QuanLyNhaHangModel.Usp_GetAllBillDetail_Result)" />
+          <FunctionImport Name="Usp_GetAllBillDetailByBillDetail" ReturnType="Collection(QuanLyNhaHangModel.Usp_GetAllBillDetailByBillDetail_Result)">
             <Parameter Name="billId" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="Usp_GetAllDesk" ReturnType="Collection(QuanLyNhaHangModel.Usp_GetAllDesk_Result)" />
@@ -450,6 +452,13 @@
           <Property Type="String" Name="Name1" Nullable="true" MaxLength="100" />
         </ComplexType>
         <ComplexType Name="Usp_GetAllBillDetail_Result">
+          <Property Type="Int32" Name="Id" Nullable="false" />
+          <Property Type="String" Name="FoodId" Nullable="false" MaxLength="30" />
+          <Property Type="String" Name="BillId" Nullable="false" MaxLength="30" />
+          <Property Type="Int32" Name="Quantity" Nullable="true" />
+          <Property Type="DateTime" Name="CreatedDate" Nullable="true" Precision="23" />
+        </ComplexType>
+        <ComplexType Name="Usp_GetAllBillDetailByBillDetail_Result">
           <Property Type="Int32" Name="Id" Nullable="false" />
           <Property Type="String" Name="FoodId" Nullable="false" MaxLength="30" />
           <Property Type="String" Name="BillId" Nullable="false" MaxLength="30" />
@@ -602,6 +611,17 @@
           <FunctionImportMapping FunctionImportName="Usp_GetAllBillDetail" FunctionName="QuanLyNhaHangModel.Store.Usp_GetAllBillDetail">
             <ResultMapping>
               <ComplexTypeMapping TypeName="QuanLyNhaHangModel.Usp_GetAllBillDetail_Result">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="FoodId" ColumnName="FoodId" />
+                <ScalarProperty Name="BillId" ColumnName="BillId" />
+                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="Usp_GetAllBillDetailByBillDetail" FunctionName="QuanLyNhaHangModel.Store.Usp_GetAllBillDetailByBillDetail">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="QuanLyNhaHangModel.Usp_GetAllBillDetailByBillDetail_Result">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="FoodId" ColumnName="FoodId" />
                 <ScalarProperty Name="BillId" ColumnName="BillId" />
