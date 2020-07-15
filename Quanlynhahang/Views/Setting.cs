@@ -11,9 +11,17 @@ namespace Quanlynhahang.Views
 {
     public partial class Setting : UserControl
     {
+        public Form1 form1;
         public Setting()
         {
             InitializeComponent();
+        }
+        public Setting(Form1 form)
+        {
+            InitializeComponent();
+            this.form1 = form;
+            txtName.Text = form1.Account.Name;
+            txtEmail.Text = form1.Account.Email;
         }
 
         private void guna2Button2_Click(object sender, EventArgs e)

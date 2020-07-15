@@ -30,8 +30,8 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.guna2DateTimePicker1 = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.guna2DateTimePicker2 = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.DtFrom = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.DtTo = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
@@ -75,35 +75,35 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Lịch sử quán ăn";
             // 
-            // guna2DateTimePicker1
+            // DtFrom
             // 
-            this.guna2DateTimePicker1.CheckedState.Parent = this.guna2DateTimePicker1;
-            this.guna2DateTimePicker1.FillColor = System.Drawing.Color.Silver;
-            this.guna2DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.guna2DateTimePicker1.HoverState.Parent = this.guna2DateTimePicker1;
-            this.guna2DateTimePicker1.Location = new System.Drawing.Point(190, 83);
-            this.guna2DateTimePicker1.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.guna2DateTimePicker1.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.guna2DateTimePicker1.Name = "guna2DateTimePicker1";
-            this.guna2DateTimePicker1.ShadowDecoration.Parent = this.guna2DateTimePicker1;
-            this.guna2DateTimePicker1.Size = new System.Drawing.Size(200, 36);
-            this.guna2DateTimePicker1.TabIndex = 1;
-            this.guna2DateTimePicker1.Value = new System.DateTime(2020, 7, 3, 15, 46, 52, 378);
+            this.DtFrom.CheckedState.Parent = this.DtFrom;
+            this.DtFrom.FillColor = System.Drawing.Color.Silver;
+            this.DtFrom.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.DtFrom.HoverState.Parent = this.DtFrom;
+            this.DtFrom.Location = new System.Drawing.Point(190, 83);
+            this.DtFrom.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.DtFrom.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.DtFrom.Name = "DtFrom";
+            this.DtFrom.ShadowDecoration.Parent = this.DtFrom;
+            this.DtFrom.Size = new System.Drawing.Size(200, 36);
+            this.DtFrom.TabIndex = 1;
+            this.DtFrom.Value = new System.DateTime(2020, 7, 3, 15, 46, 52, 378);
             // 
-            // guna2DateTimePicker2
+            // DtTo
             // 
-            this.guna2DateTimePicker2.CheckedState.Parent = this.guna2DateTimePicker2;
-            this.guna2DateTimePicker2.FillColor = System.Drawing.Color.Silver;
-            this.guna2DateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.guna2DateTimePicker2.HoverState.Parent = this.guna2DateTimePicker2;
-            this.guna2DateTimePicker2.Location = new System.Drawing.Point(526, 83);
-            this.guna2DateTimePicker2.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.guna2DateTimePicker2.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.guna2DateTimePicker2.Name = "guna2DateTimePicker2";
-            this.guna2DateTimePicker2.ShadowDecoration.Parent = this.guna2DateTimePicker2;
-            this.guna2DateTimePicker2.Size = new System.Drawing.Size(203, 36);
-            this.guna2DateTimePicker2.TabIndex = 1;
-            this.guna2DateTimePicker2.Value = new System.DateTime(2020, 7, 3, 15, 46, 52, 378);
+            this.DtTo.CheckedState.Parent = this.DtTo;
+            this.DtTo.FillColor = System.Drawing.Color.Silver;
+            this.DtTo.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.DtTo.HoverState.Parent = this.DtTo;
+            this.DtTo.Location = new System.Drawing.Point(526, 83);
+            this.DtTo.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.DtTo.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.DtTo.Name = "DtTo";
+            this.DtTo.ShadowDecoration.Parent = this.DtTo;
+            this.DtTo.Size = new System.Drawing.Size(203, 36);
+            this.DtTo.TabIndex = 1;
+            this.DtTo.Value = new System.DateTime(2020, 7, 3, 15, 46, 52, 378);
             // 
             // panel2
             // 
@@ -256,8 +256,8 @@
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.guna2DateTimePicker2);
-            this.Controls.Add(this.guna2DateTimePicker1);
+            this.Controls.Add(this.DtTo);
+            this.Controls.Add(this.DtFrom);
             this.Controls.Add(this.panel1);
             this.Name = "History";
             this.Size = new System.Drawing.Size(965, 780);
@@ -283,8 +283,8 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private Guna.UI2.WinForms.Guna2DateTimePicker guna2DateTimePicker1;
-        private Guna.UI2.WinForms.Guna2DateTimePicker guna2DateTimePicker2;
+        private Guna.UI2.WinForms.Guna2DateTimePicker DtFrom;
+        private Guna.UI2.WinForms.Guna2DateTimePicker DtTo;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel5;

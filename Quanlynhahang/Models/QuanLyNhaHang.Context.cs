@@ -83,13 +83,13 @@ namespace Quanlynhahang.Models
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Usp_GetAllBillDetail_Result>("Usp_GetAllBillDetail");
         }
     
-        public virtual ObjectResult<Usp_GetAllBillDetailByBillDetail_Result> Usp_GetAllBillDetailByBillDetail(string billId)
+        public virtual ObjectResult<Usp_GetAllBillDetailByBill_Result> Usp_GetAllBillDetailByBill(string billId)
         {
             var billIdParameter = billId != null ?
                 new ObjectParameter("billId", billId) :
                 new ObjectParameter("billId", typeof(string));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Usp_GetAllBillDetailByBillDetail_Result>("Usp_GetAllBillDetailByBillDetail", billIdParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Usp_GetAllBillDetailByBill_Result>("Usp_GetAllBillDetailByBill", billIdParameter);
         }
     
         public virtual ObjectResult<Usp_GetAllDesk_Result> Usp_GetAllDesk()
@@ -105,6 +105,28 @@ namespace Quanlynhahang.Models
         public virtual ObjectResult<Usp_GetAllFoodType_Result> Usp_GetAllFoodType()
         {
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Usp_GetAllFoodType_Result>("Usp_GetAllFoodType");
+        }
+    
+        public virtual ObjectResult<Usp_GetBillByDeskId_Result> Usp_GetBillByDeskId(string deskId, Nullable<int> status)
+        {
+            var deskIdParameter = deskId != null ?
+                new ObjectParameter("deskId", deskId) :
+                new ObjectParameter("deskId", typeof(string));
+    
+            var statusParameter = status.HasValue ?
+                new ObjectParameter("status", status) :
+                new ObjectParameter("status", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Usp_GetBillByDeskId_Result>("Usp_GetBillByDeskId", deskIdParameter, statusParameter);
+        }
+    
+        public virtual ObjectResult<Usp_GetDeskById_Result> Usp_GetDeskById(string id)
+        {
+            var idParameter = id != null ?
+                new ObjectParameter("id", id) :
+                new ObjectParameter("id", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Usp_GetDeskById_Result>("Usp_GetDeskById", idParameter);
         }
     
         public virtual ObjectResult<Usp_GetFoodByFoodType_Result> Usp_GetFoodByFoodType(string typeId)
@@ -123,6 +145,40 @@ namespace Quanlynhahang.Models
                 new ObjectParameter("id", typeof(string));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Usp_GetFoodById_Result>("Usp_GetFoodById", idParameter);
+        }
+    
+        public virtual int Usp_InsertBill(string id, string deskId, Nullable<int> accountId)
+        {
+            var idParameter = id != null ?
+                new ObjectParameter("id", id) :
+                new ObjectParameter("id", typeof(string));
+    
+            var deskIdParameter = deskId != null ?
+                new ObjectParameter("deskId", deskId) :
+                new ObjectParameter("deskId", typeof(string));
+    
+            var accountIdParameter = accountId.HasValue ?
+                new ObjectParameter("accountId", accountId) :
+                new ObjectParameter("accountId", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("Usp_InsertBill", idParameter, deskIdParameter, accountIdParameter);
+        }
+    
+        public virtual int Usp_InsertBillDetail(string foodId, string billId, Nullable<int> quantity)
+        {
+            var foodIdParameter = foodId != null ?
+                new ObjectParameter("foodId", foodId) :
+                new ObjectParameter("foodId", typeof(string));
+    
+            var billIdParameter = billId != null ?
+                new ObjectParameter("billId", billId) :
+                new ObjectParameter("billId", typeof(string));
+    
+            var quantityParameter = quantity.HasValue ?
+                new ObjectParameter("quantity", quantity) :
+                new ObjectParameter("quantity", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("Usp_InsertBillDetail", foodIdParameter, billIdParameter, quantityParameter);
         }
     
         public virtual int Usp_InsertDesk(string id, string name, Nullable<byte> status)
@@ -199,6 +255,19 @@ namespace Quanlynhahang.Models
                 new ObjectParameter("avatar", typeof(string));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("Usp_UpdateAccountById", idParameter, nameParameter, passParameter, avatarParameter);
+        }
+    
+        public virtual int Usp_UpdateBill(string id, Nullable<int> total)
+        {
+            var idParameter = id != null ?
+                new ObjectParameter("id", id) :
+                new ObjectParameter("id", typeof(string));
+    
+            var totalParameter = total.HasValue ?
+                new ObjectParameter("total", total) :
+                new ObjectParameter("total", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("Usp_UpdateBill", idParameter, totalParameter);
         }
     
         public virtual int USp_UpdateDesk(string id, Nullable<byte> status)

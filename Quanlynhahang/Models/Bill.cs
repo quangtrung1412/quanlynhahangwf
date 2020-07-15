@@ -24,6 +24,7 @@ namespace Quanlynhahang.Models
         public string DeskId { get; set; }
         public Nullable<int> AccountId { get; set; }
         public Nullable<int> Total { get; set; }
+        public Nullable<int> Status { get; set; }
         public Nullable<System.DateTime> CreatedAt { get; set; }
     
         public virtual Account Account { get; set; }

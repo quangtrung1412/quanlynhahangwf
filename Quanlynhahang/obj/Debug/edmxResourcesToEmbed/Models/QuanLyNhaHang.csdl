@@ -20,6 +20,7 @@
     <Property Name="DeskId" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
     <Property Name="AccountId" Type="Int32" />
     <Property Name="Total" Type="Int32" />
+    <Property Name="Status" Type="Int32" />
     <Property Name="CreatedAt" Type="DateTime" Precision="3" />
     <NavigationProperty Name="Account" Relationship="Self.fk_user" FromRole="Bill" ToRole="Account" />
     <NavigationProperty Name="BillDetails" Relationship="Self.fk_bi" FromRole="Bill" ToRole="BillDetail" />
@@ -170,17 +171,34 @@
       <Parameter Name="to" Mode="In" Type="DateTime" />
     </FunctionImport>
     <FunctionImport Name="Usp_GetAllBillDetail" ReturnType="Collection(QuanLyNhaHangModel.Usp_GetAllBillDetail_Result)" />
-    <FunctionImport Name="Usp_GetAllBillDetailByBillDetail" ReturnType="Collection(QuanLyNhaHangModel.Usp_GetAllBillDetailByBillDetail_Result)">
+    <FunctionImport Name="Usp_GetAllBillDetailByBill" ReturnType="Collection(QuanLyNhaHangModel.Usp_GetAllBillDetailByBill_Result)">
       <Parameter Name="billId" Mode="In" Type="String" />
     </FunctionImport>
     <FunctionImport Name="Usp_GetAllDesk" ReturnType="Collection(QuanLyNhaHangModel.Usp_GetAllDesk_Result)" />
     <FunctionImport Name="Usp_GetAllFood" ReturnType="Collection(QuanLyNhaHangModel.Usp_GetAllFood_Result)" />
     <FunctionImport Name="Usp_GetAllFoodType" ReturnType="Collection(QuanLyNhaHangModel.Usp_GetAllFoodType_Result)" />
+    <FunctionImport Name="Usp_GetBillByDeskId" ReturnType="Collection(QuanLyNhaHangModel.Usp_GetBillByDeskId_Result)">
+      <Parameter Name="deskId" Mode="In" Type="String" />
+      <Parameter Name="status" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="Usp_GetDeskById" ReturnType="Collection(QuanLyNhaHangModel.Usp_GetDeskById_Result)">
+      <Parameter Name="id" Mode="In" Type="String" />
+    </FunctionImport>
     <FunctionImport Name="Usp_GetFoodByFoodType" ReturnType="Collection(QuanLyNhaHangModel.Usp_GetFoodByFoodType_Result)">
       <Parameter Name="typeId" Mode="In" Type="String" />
     </FunctionImport>
     <FunctionImport Name="Usp_GetFoodById" ReturnType="Collection(QuanLyNhaHangModel.Usp_GetFoodById_Result)">
       <Parameter Name="id" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Usp_InsertBill">
+      <Parameter Name="id" Mode="In" Type="String" />
+      <Parameter Name="deskId" Mode="In" Type="String" />
+      <Parameter Name="accountId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="Usp_InsertBillDetail">
+      <Parameter Name="foodId" Mode="In" Type="String" />
+      <Parameter Name="billId" Mode="In" Type="String" />
+      <Parameter Name="quantity" Mode="In" Type="Int32" />
     </FunctionImport>
     <FunctionImport Name="Usp_InsertDesk">
       <Parameter Name="id" Mode="In" Type="String" />
@@ -203,6 +221,10 @@
       <Parameter Name="name" Mode="In" Type="String" />
       <Parameter Name="pass" Mode="In" Type="String" />
       <Parameter Name="avatar" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Usp_UpdateBill">
+      <Parameter Name="id" Mode="In" Type="String" />
+      <Parameter Name="total" Mode="In" Type="Int32" />
     </FunctionImport>
     <FunctionImport Name="USp_UpdateDesk">
       <Parameter Name="id" Mode="In" Type="String" />
@@ -230,6 +252,7 @@
     <Property Type="String" Name="DeskId" Nullable="true" MaxLength="30" />
     <Property Type="Int32" Name="AccountId" Nullable="true" />
     <Property Type="Int32" Name="Total" Nullable="true" />
+    <Property Type="Int32" Name="Status" Nullable="true" />
     <Property Type="DateTime" Name="CreatedAt" Nullable="true" Precision="23" />
     <Property Type="String" Name="Name" Nullable="false" MaxLength="50" />
     <Property Type="String" Name="Name1" Nullable="true" MaxLength="100" />
@@ -241,13 +264,19 @@
     <Property Type="Int32" Name="Quantity" Nullable="true" />
     <Property Type="DateTime" Name="CreatedDate" Nullable="true" Precision="23" />
   </ComplexType>
-  <ComplexType Name="Usp_GetAllBillDetailByBillDetail_Result">
+  <ComplexType Name="Usp_GetAllBillDetailByBill_Result">
     <Property Type="Int32" Name="Id" Nullable="false" />
     <Property Type="String" Name="FoodId" Nullable="false" MaxLength="30" />
     <Property Type="String" Name="BillId" Nullable="false" MaxLength="30" />
     <Property Type="Int32" Name="Quantity" Nullable="true" />
     <Property Type="DateTime" Name="CreatedDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="Id1" Nullable="false" MaxLength="30" />
+    <Property Type="String" Name="TypeId" Nullable="false" MaxLength="30" />
     <Property Type="String" Name="Name" Nullable="false" MaxLength="100" />
+    <Property Type="Int32" Name="Price" Nullable="false" />
+    <Property Type="String" Name="Unit" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="Picture" Nullable="true" MaxLength="100" />
+    <Property Type="Byte" Name="Status" Nullable="true" />
   </ComplexType>
   <ComplexType Name="Usp_GetAllDesk_Result">
     <Property Type="String" Name="Id" Nullable="false" MaxLength="30" />
@@ -266,6 +295,19 @@
   <ComplexType Name="Usp_GetAllFoodType_Result">
     <Property Type="String" Name="Id" Nullable="false" MaxLength="30" />
     <Property Type="String" Name="Name" Nullable="false" MaxLength="100" />
+  </ComplexType>
+  <ComplexType Name="Usp_GetBillByDeskId_Result">
+    <Property Type="String" Name="Id" Nullable="false" MaxLength="30" />
+    <Property Type="String" Name="DeskId" Nullable="true" MaxLength="30" />
+    <Property Type="Int32" Name="AccountId" Nullable="true" />
+    <Property Type="Int32" Name="Total" Nullable="true" />
+    <Property Type="Int32" Name="Status" Nullable="true" />
+    <Property Type="DateTime" Name="CreatedAt" Nullable="true" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="Usp_GetDeskById_Result">
+    <Property Type="String" Name="Id" Nullable="false" MaxLength="30" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="50" />
+    <Property Type="Byte" Name="Status" Nullable="true" />
   </ComplexType>
   <ComplexType Name="Usp_GetFoodByFoodType_Result">
     <Property Type="String" Name="Id" Nullable="false" MaxLength="30" />

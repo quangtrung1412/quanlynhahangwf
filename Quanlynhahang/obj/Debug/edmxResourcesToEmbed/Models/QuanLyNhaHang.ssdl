@@ -19,6 +19,7 @@
     <Property Name="DeskId" Type="varchar" MaxLength="30" />
     <Property Name="AccountId" Type="int" />
     <Property Name="Total" Type="int" />
+    <Property Name="Status" Type="int" />
     <Property Name="CreatedAt" Type="datetime" />
   </EntityType>
   <EntityType Name="BillDetail">
@@ -133,17 +134,34 @@
     <Parameter Name="to" Type="datetime" Mode="In" />
   </Function>
   <Function Name="Usp_GetAllBillDetail" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
-  <Function Name="Usp_GetAllBillDetailByBillDetail" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+  <Function Name="Usp_GetAllBillDetailByBill" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="billId" Type="varchar" Mode="In" />
   </Function>
   <Function Name="Usp_GetAllDesk" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
   <Function Name="Usp_GetAllFood" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
   <Function Name="Usp_GetAllFoodType" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="Usp_GetBillByDeskId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="deskId" Type="varchar" Mode="In" />
+    <Parameter Name="status" Type="int" Mode="In" />
+  </Function>
+  <Function Name="Usp_GetDeskById" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="varchar" Mode="In" />
+  </Function>
   <Function Name="Usp_GetFoodByFoodType" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="typeId" Type="nvarchar" Mode="In" />
   </Function>
   <Function Name="Usp_GetFoodById" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="id" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="Usp_InsertBill" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="varchar" Mode="In" />
+    <Parameter Name="deskId" Type="varchar" Mode="In" />
+    <Parameter Name="accountId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="Usp_InsertBillDetail" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="foodId" Type="varchar" Mode="In" />
+    <Parameter Name="billId" Type="varchar" Mode="In" />
+    <Parameter Name="quantity" Type="int" Mode="In" />
   </Function>
   <Function Name="Usp_InsertDesk" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="id" Type="varchar" Mode="In" />
@@ -166,6 +184,10 @@
     <Parameter Name="name" Type="nvarchar" Mode="In" />
     <Parameter Name="pass" Type="nvarchar" Mode="In" />
     <Parameter Name="avatar" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="Usp_UpdateBill" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="varchar" Mode="In" />
+    <Parameter Name="total" Type="int" Mode="In" />
   </Function>
   <Function Name="USp_UpdateDesk" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="id" Type="varchar" Mode="In" />

@@ -51,5 +51,36 @@ namespace Quanlynhahang.DAO.Implements
             }
             return listB;
         }
+
+        public List<Bill> GetBillByDeskId(string idDesk, int status)
+        {
+            List<Bill> list = new List<Bill>();
+            var resultSet = db.Usp_GetBillByDeskId(idDesk, status).ToList();
+            if (resultSet.Count() > 0)
+            {
+                foreach(var u in resultSet)
+                {
+                    Bill bl = new Bill();
+                    bl.Id = u.Id;
+                    bl.DeskId = u.DeskId;
+                    bl.AccountId = u.AccountId;
+                    bl.Total = u.Total;
+                    bl.Status = u.Status;
+                    list.Add(bl);
+                }
+
+            }
+            return list;
+        }
+
+        public bool InsertBill(Bill bill)
+        {
+            int result = db.Usp_InsertBill(bill.Id, bill.DeskId, bill.AccountId);
+            if(result == 1)
+            {
+                return true;
+            }
+            return false;
+        }
     }
 }

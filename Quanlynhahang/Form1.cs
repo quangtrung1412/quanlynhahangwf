@@ -16,14 +16,13 @@ namespace Quanlynhahang
         public Account Account { get; set; }
         public Form1()
         {
-            InitializeComponent();
-            
-            
+            InitializeComponent();   
         }
         public Form1(Account acc)
         {
             InitializeComponent();
             Account = acc;
+            LbName.Text = Account.Name;
         }
 
         private void guna2ControlBox1_Click(object sender, EventArgs e)
@@ -52,7 +51,7 @@ namespace Quanlynhahang
 
         private void guna2GradientButton2_Click(object sender, EventArgs e)
         {
-            Views.ListTable lt = new Views.ListTable();
+            Views.ListTable lt = new Views.ListTable(Account);
             this.panelDisplay.Controls.Clear();
             this.panelDisplay.Controls.Add(lt);
             lt.Location = new Point(0, 0);

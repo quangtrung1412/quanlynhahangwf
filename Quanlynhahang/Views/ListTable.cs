@@ -15,10 +15,13 @@ namespace Quanlynhahang.Views
     public partial class ListTable : UserControl
     {
         public List<Desk> listDesk = new List<Desk>();
-        public ListTable()
+        public Bill CurrentBill = null;
+        public List<BillDetail> ListBillDetail = null;
+        public Account Account { get; set; }
+        public ListTable(Account account)
         {
             InitializeComponent();
-            
+            Account = account;
         }
     
         private void panel2_Paint(object sender, PaintEventArgs e)
@@ -47,7 +50,9 @@ namespace Quanlynhahang.Views
 
         private void BtnAddBillDetail_Click(object sender, EventArgs e)
         {
-
+            string foodId =CbFood.SelectedValue.ToString();
+            int quanlity = (int)NrQuantity.Value;
+            new AddBillDetailHandle(this).Handle(foodId, quanlity);
         }
 
         private void CbTypeFood_SelectedIndexChanged(object sender, EventArgs e)
@@ -56,6 +61,13 @@ namespace Quanlynhahang.Views
             CbFood.DataSource = new FoodDAO().GetFoodByFoodType(typeId);
             CbFood.ValueMember = "Id";
             CbFood.DisplayMember = "Name";
+        }
+        public void DisplayBillDetail(BillDetail billDetail)
+        {
+            TblBillDetail.Items.Insert(0, billDetail.FoodId);
+            TblBillDetail.Items.Insert(0, billDetail.FoodId);
+            TblBillDetail.Items.Insert(0, billDetail.Quantity + "");
+            TblBillDetail.Items.Insert(0, 22 + "");
         }
 
         private void ListTable_Load(object sender, EventArgs e)
@@ -72,6 +84,10 @@ namespace Quanlynhahang.Views
             CbFood.ValueMember = "Id";
             CbFood.DisplayMember = "Name";
         }
+        public void LisTableRefresh()
+        {
+            new LoadDeskHandle(this).Handle();
+        }
         //DisplayDesk
         public void DisplayDeskList ( List<Desk> list)
         {
@@ -82,12 +98,24 @@ namespace Quanlynhahang.Views
             this.DeskList.Controls.Clear();
             foreach(var d in list)
             {
-                Views.Table table = new Views.Table(d.Id, d.Name,(byte)d.Status);
+                Views.Table table = new Views.Table(d);
+                table.DeleteDeskClick(new DeleteDeskHandle(this, d).Handle);
+                table.TableClick(new GetBillByIdDeskHandle(this, d).Handle);
                 table.ChangeStateClick(new ChangeStateClick(this, d).Handle);
                 this.DeskList.Controls.Add(table);
             }
         }
         public void ChangeState(Desk d)
+        {
+            Table table = new Table(d);
+            int index = this.DeskList.Controls.GetChildIndex(table);
+            Table t = (Table)this.DeskList.Controls[index];
+            t.BackColor = Color.Purple;
+            t.State.Text = "Bàn bận";
+            t.State.ForeColor = Color.Red;
+        }
+        //Show Bill
+        public void ShowBill(string idDesk)
         {
 
         }

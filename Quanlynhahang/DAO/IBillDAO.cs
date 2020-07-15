@@ -10,6 +10,7 @@ namespace Quanlynhahang.DAO
     {
         List<Bill> GetAllBill(DateTime from ,DateTime to);
         List<BillDetail> GetAllBillDetail();
-
+        List<Bill> GetBillByDeskId(string idDesk, int status);
+        bool InsertBill(Bill bill);
     }
 }

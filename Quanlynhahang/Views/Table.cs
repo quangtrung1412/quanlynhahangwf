@@ -6,20 +6,23 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using Quanlynhahang.Models;
 
 namespace Quanlynhahang.Views
 {
     public partial class Table : UserControl
     {
+        public Desk Desk { get; set; }
+
         public Table()
         {
             InitializeComponent();
         }
-        public Table(string id , string name , byte status)
+        public Table(Desk d)
         {
             InitializeComponent();
-            DeskName.Text = name;
-
+            DeskName.Text = d.Name;
+            Desk = d;
         }
         public void TableClick(EventHandler e)
         {
@@ -36,6 +39,35 @@ namespace Quanlynhahang.Views
         public void ChangeStateClick(EventHandler e)
         {
             this.ChangeState.Click += e;
+        }
+
+        
+        public void DeleteDeskClick(EventHandler e)
+        {
+            this.DeleteDesk.Click += e;
+        }
+        public override bool Equals(object obj)
+        {
+            if (obj == null)
+            {
+                return false;
+            }
+            if (obj.GetType() != typeof(Table))
+            {
+                return false;
+            }
+            Table other = (Table)obj;
+            if (Desk.Id != other.Desk.Id)
+            {
+                return false;
+            }
+            return true;
+        }
+        public override int GetHashCode()
+        {
+            int hash = 0;
+            hash += (Desk.Id != null ? Desk.Id.GetHashCode() : 0);
+            return hash;
         }
     }
 }

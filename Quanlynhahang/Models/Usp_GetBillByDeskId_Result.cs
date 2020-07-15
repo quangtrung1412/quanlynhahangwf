@@ -11,13 +11,13 @@ namespace Quanlynhahang.Models
 {
     using System;
     
-    public partial class Usp_GetAllBillDetailByBillDetail_Result
+    public partial class Usp_GetBillByDeskId_Result
     {
-        public int Id { get; set; }
-        public string FoodId { get; set; }
-        public string BillId { get; set; }
-        public Nullable<int> Quantity { get; set; }
-        public Nullable<System.DateTime> CreatedDate { get; set; }
-        public string Name { get; set; }
+        public string Id { get; set; }
+        public string DeskId { get; set; }
+        public Nullable<int> AccountId { get; set; }
+        public Nullable<int> Total { get; set; }
+        public Nullable<int> Status { get; set; }
+        public Nullable<System.DateTime> CreatedAt { get; set; }
     }
 }

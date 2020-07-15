@@ -19,7 +19,7 @@ go
 create table Desk( 
 	Id varchar(30) primary key,
 	Name nvarchar(50) not null,
-	Status tinyint
+	Status tinyint default 0
 )
 go
 create table Bill (
@@ -27,6 +27,7 @@ create table Bill (
 	DeskId Varchar(30),
 	AccountId int,
 	Total int,
+	Status int default 0,
 	CreatedAt datetime default getdate() ,
 	Constraint fk_tbl foreign key (DeskId) references Desk(Id),
 	Constraint fk_user foreign key (AccountId) references Account(Id)
@@ -69,12 +70,15 @@ insert into Desk(Id,Name,Status) values ('D001',N'Bàn số 1',0),('D002',N'Bàn
 ('D005',N'Bàn số 5',0),('D006',N'Bàn số 6',0),('D007',N'Bàn số 7',0),('D008',N'Bàn số 8',0),('D009',N'Bàn số 9',0),('D010',N'Bàn số 10',0)
 go
 --insert Bill
-insert into Bill(Id,DeskId,AccountId,Total) values('B001','D001',1,1000000),('B002','D002',1,1000000),('B003','D003',1,1000000),('B004','D004',1,1000000),
-('B005','D005',1,1000000),('B006','D006',1,1000000),('B007','D007',1,1000000),('B008','D008',1,1000000),('B009','D009',1,1000000),('B010','D010',1,1000000)
+insert into Bill(Id,DeskId,AccountId,Status) values('B001','D001',1,0),('B002','D002',1,1),('B003','D003',1,0),('B004','D004',1,0)
 go
 --insert Food
 insert into Food(Id,TypeId,Name,Price,Unit) values('F001','1',N'Bún Đậu',30000,N'Đĩa'),('F002','1',N'Bún Canh',30000,N'Bát'),('F003','1',N'Bánh Cuốn',30000,N'Đĩa'),
 ('F004','1',N'Bánh Đa Cua',35000,N'Bát'),('F005','2',N'Coca',10000,N'lon'),('F006','3',N'Bánh Ngọt',10000,N'chiếc')
+go
+--Insert BillDetail
+insert into BillDetail(FoodId,BillId,Quantity)values('F001','B001',2),('F002','B001',2),('F003','B001',2),('F004','B001',1),('F001','B002',3),('F005','B002',5),
+('F006','B003',2),('F003','B004',2)
 go
 --Account
 create proc Usp_GetAccountByLoginInfo(@email AS Varchar(50), @password AS VARCHAR(100))
@@ -113,10 +117,23 @@ go
 create proc Usp_GetAllBill (@from as datetime , @to as datetime ) as SELECT Bill.*, Desk.Name , Account.Name FROM ((Bill 
 inner join Desk on Bill.DeskId =Desk.Id) inner join Account on Bill.AccountId=Account.Id) where Bill.CreatedAt between @from AND @to
 go
-Create proc Usp_GetAllBillDetailByBillDetail(@billId as varchar(30)) as SELECT BillDetail.* , Food.Name 
+create proc Usp_InsertBill(@id as varchar(30),@deskId as varchar(30),@accountId as int) as
+insert into Bill(Id,DeskId,AccountId)values(@id,@deskId,@accountId)
+go
+create proc Usp_UpdateBill(@id as varchar(30),@total as int)as 
+update Bill set Total=@total where Id=@id
+go
+create proc Usp_GetBillByDeskId(@deskId as varchar(30),@status as int)as
+Select * from Bill where DeskId=@deskId and Status=@status
+go
+--BillDetail
+Create proc Usp_GetAllBillDetailByBill(@billId as varchar(30)) as SELECT BillDetail.* , Food.*
 From BillDetail inner join Food on BillDetail.FoodId=Food.Id where BillId = @billId
 go
 Create proc Usp_GetAllBillDetail as SELECT *From BillDetail
+go
+create proc Usp_InsertBillDetail(@foodId as varchar(30),@billId as varchar(30),@quantity as int) as
+insert into BillDetail (FoodId,BillId,Quantity) values(@foodId,@billId,@quantity)
 go
 
 --Desk 
@@ -129,6 +146,6 @@ create proc Usp_DeleteDesk (@id as varchar(30)) as Delete From Desk where Id =@i
 go
 Create proc USp_UpdateDesk (@id as varchar(30),@status as tinyint) as update Desk Set Status=@status where Id=@id
 go
-
+create proc Usp_GetDeskById(@id as varchar(30))as select * from Desk where Id=@id
 
 

@@ -24,6 +24,7 @@
           <Property Name="DeskId" Type="varchar" MaxLength="30" />
           <Property Name="AccountId" Type="int" />
           <Property Name="Total" Type="int" />
+          <Property Name="Status" Type="int" />
           <Property Name="CreatedAt" Type="datetime" />
         </EntityType>
         <EntityType Name="BillDetail">
@@ -138,17 +139,34 @@
           <Parameter Name="to" Type="datetime" Mode="In" />
         </Function>
         <Function Name="Usp_GetAllBillDetail" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
-        <Function Name="Usp_GetAllBillDetailByBillDetail" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+        <Function Name="Usp_GetAllBillDetailByBill" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="billId" Type="varchar" Mode="In" />
         </Function>
         <Function Name="Usp_GetAllDesk" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="Usp_GetAllFood" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="Usp_GetAllFoodType" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="Usp_GetBillByDeskId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="deskId" Type="varchar" Mode="In" />
+          <Parameter Name="status" Type="int" Mode="In" />
+        </Function>
+        <Function Name="Usp_GetDeskById" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id" Type="varchar" Mode="In" />
+        </Function>
         <Function Name="Usp_GetFoodByFoodType" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="typeId" Type="nvarchar" Mode="In" />
         </Function>
         <Function Name="Usp_GetFoodById" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="id" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="Usp_InsertBill" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id" Type="varchar" Mode="In" />
+          <Parameter Name="deskId" Type="varchar" Mode="In" />
+          <Parameter Name="accountId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="Usp_InsertBillDetail" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="foodId" Type="varchar" Mode="In" />
+          <Parameter Name="billId" Type="varchar" Mode="In" />
+          <Parameter Name="quantity" Type="int" Mode="In" />
         </Function>
         <Function Name="Usp_InsertDesk" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="id" Type="varchar" Mode="In" />
@@ -171,6 +189,10 @@
           <Parameter Name="name" Type="nvarchar" Mode="In" />
           <Parameter Name="pass" Type="nvarchar" Mode="In" />
           <Parameter Name="avatar" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="Usp_UpdateBill" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id" Type="varchar" Mode="In" />
+          <Parameter Name="total" Type="int" Mode="In" />
         </Function>
         <Function Name="USp_UpdateDesk" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="id" Type="varchar" Mode="In" />
@@ -237,6 +259,7 @@
           <Property Name="DeskId" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
           <Property Name="AccountId" Type="Int32" />
           <Property Name="Total" Type="Int32" />
+          <Property Name="Status" Type="Int32" />
           <Property Name="CreatedAt" Type="DateTime" Precision="3" />
           <NavigationProperty Name="Account" Relationship="Self.fk_user" FromRole="Bill" ToRole="Account" />
           <NavigationProperty Name="BillDetails" Relationship="Self.fk_bi" FromRole="Bill" ToRole="BillDetail" />
@@ -387,17 +410,34 @@
             <Parameter Name="to" Mode="In" Type="DateTime" />
           </FunctionImport>
           <FunctionImport Name="Usp_GetAllBillDetail" ReturnType="Collection(QuanLyNhaHangModel.Usp_GetAllBillDetail_Result)" />
-          <FunctionImport Name="Usp_GetAllBillDetailByBillDetail" ReturnType="Collection(QuanLyNhaHangModel.Usp_GetAllBillDetailByBillDetail_Result)">
+          <FunctionImport Name="Usp_GetAllBillDetailByBill" ReturnType="Collection(QuanLyNhaHangModel.Usp_GetAllBillDetailByBill_Result)">
             <Parameter Name="billId" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="Usp_GetAllDesk" ReturnType="Collection(QuanLyNhaHangModel.Usp_GetAllDesk_Result)" />
           <FunctionImport Name="Usp_GetAllFood" ReturnType="Collection(QuanLyNhaHangModel.Usp_GetAllFood_Result)" />
           <FunctionImport Name="Usp_GetAllFoodType" ReturnType="Collection(QuanLyNhaHangModel.Usp_GetAllFoodType_Result)" />
+          <FunctionImport Name="Usp_GetBillByDeskId" ReturnType="Collection(QuanLyNhaHangModel.Usp_GetBillByDeskId_Result)">
+            <Parameter Name="deskId" Mode="In" Type="String" />
+            <Parameter Name="status" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="Usp_GetDeskById" ReturnType="Collection(QuanLyNhaHangModel.Usp_GetDeskById_Result)">
+            <Parameter Name="id" Mode="In" Type="String" />
+          </FunctionImport>
           <FunctionImport Name="Usp_GetFoodByFoodType" ReturnType="Collection(QuanLyNhaHangModel.Usp_GetFoodByFoodType_Result)">
             <Parameter Name="typeId" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="Usp_GetFoodById" ReturnType="Collection(QuanLyNhaHangModel.Usp_GetFoodById_Result)">
             <Parameter Name="id" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="Usp_InsertBill">
+            <Parameter Name="id" Mode="In" Type="String" />
+            <Parameter Name="deskId" Mode="In" Type="String" />
+            <Parameter Name="accountId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="Usp_InsertBillDetail">
+            <Parameter Name="foodId" Mode="In" Type="String" />
+            <Parameter Name="billId" Mode="In" Type="String" />
+            <Parameter Name="quantity" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="Usp_InsertDesk">
             <Parameter Name="id" Mode="In" Type="String" />
@@ -420,6 +460,10 @@
             <Parameter Name="name" Mode="In" Type="String" />
             <Parameter Name="pass" Mode="In" Type="String" />
             <Parameter Name="avatar" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="Usp_UpdateBill">
+            <Parameter Name="id" Mode="In" Type="String" />
+            <Parameter Name="total" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="USp_UpdateDesk">
             <Parameter Name="id" Mode="In" Type="String" />
@@ -447,6 +491,7 @@
           <Property Type="String" Name="DeskId" Nullable="true" MaxLength="30" />
           <Property Type="Int32" Name="AccountId" Nullable="true" />
           <Property Type="Int32" Name="Total" Nullable="true" />
+          <Property Type="Int32" Name="Status" Nullable="true" />
           <Property Type="DateTime" Name="CreatedAt" Nullable="true" Precision="23" />
           <Property Type="String" Name="Name" Nullable="false" MaxLength="50" />
           <Property Type="String" Name="Name1" Nullable="true" MaxLength="100" />
@@ -458,13 +503,19 @@
           <Property Type="Int32" Name="Quantity" Nullable="true" />
           <Property Type="DateTime" Name="CreatedDate" Nullable="true" Precision="23" />
         </ComplexType>
-        <ComplexType Name="Usp_GetAllBillDetailByBillDetail_Result">
+        <ComplexType Name="Usp_GetAllBillDetailByBill_Result">
           <Property Type="Int32" Name="Id" Nullable="false" />
           <Property Type="String" Name="FoodId" Nullable="false" MaxLength="30" />
           <Property Type="String" Name="BillId" Nullable="false" MaxLength="30" />
           <Property Type="Int32" Name="Quantity" Nullable="true" />
           <Property Type="DateTime" Name="CreatedDate" Nullable="true" Precision="23" />
+          <Property Type="String" Name="Id1" Nullable="false" MaxLength="30" />
+          <Property Type="String" Name="TypeId" Nullable="false" MaxLength="30" />
           <Property Type="String" Name="Name" Nullable="false" MaxLength="100" />
+          <Property Type="Int32" Name="Price" Nullable="false" />
+          <Property Type="String" Name="Unit" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="Picture" Nullable="true" MaxLength="100" />
+          <Property Type="Byte" Name="Status" Nullable="true" />
         </ComplexType>
         <ComplexType Name="Usp_GetAllDesk_Result">
           <Property Type="String" Name="Id" Nullable="false" MaxLength="30" />
@@ -483,6 +534,19 @@
         <ComplexType Name="Usp_GetAllFoodType_Result">
           <Property Type="String" Name="Id" Nullable="false" MaxLength="30" />
           <Property Type="String" Name="Name" Nullable="false" MaxLength="100" />
+        </ComplexType>
+        <ComplexType Name="Usp_GetBillByDeskId_Result">
+          <Property Type="String" Name="Id" Nullable="false" MaxLength="30" />
+          <Property Type="String" Name="DeskId" Nullable="true" MaxLength="30" />
+          <Property Type="Int32" Name="AccountId" Nullable="true" />
+          <Property Type="Int32" Name="Total" Nullable="true" />
+          <Property Type="Int32" Name="Status" Nullable="true" />
+          <Property Type="DateTime" Name="CreatedAt" Nullable="true" Precision="23" />
+        </ComplexType>
+        <ComplexType Name="Usp_GetDeskById_Result">
+          <Property Type="String" Name="Id" Nullable="false" MaxLength="30" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="50" />
+          <Property Type="Byte" Name="Status" Nullable="true" />
         </ComplexType>
         <ComplexType Name="Usp_GetFoodByFoodType_Result">
           <Property Type="String" Name="Id" Nullable="false" MaxLength="30" />
@@ -536,6 +600,7 @@
                 <ScalarProperty Name="DeskId" ColumnName="DeskId" />
                 <ScalarProperty Name="AccountId" ColumnName="AccountId" />
                 <ScalarProperty Name="Total" ColumnName="Total" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
                 <ScalarProperty Name="CreatedAt" ColumnName="CreatedAt" />
               </MappingFragment>
             </EntityTypeMapping>
@@ -602,6 +667,7 @@
                 <ScalarProperty Name="DeskId" ColumnName="DeskId" />
                 <ScalarProperty Name="AccountId" ColumnName="AccountId" />
                 <ScalarProperty Name="Total" ColumnName="Total" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
                 <ScalarProperty Name="CreatedAt" ColumnName="CreatedAt" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="Name1" ColumnName="Name1" />
@@ -619,15 +685,21 @@
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
-          <FunctionImportMapping FunctionImportName="Usp_GetAllBillDetailByBillDetail" FunctionName="QuanLyNhaHangModel.Store.Usp_GetAllBillDetailByBillDetail">
+          <FunctionImportMapping FunctionImportName="Usp_GetAllBillDetailByBill" FunctionName="QuanLyNhaHangModel.Store.Usp_GetAllBillDetailByBill">
             <ResultMapping>
-              <ComplexTypeMapping TypeName="QuanLyNhaHangModel.Usp_GetAllBillDetailByBillDetail_Result">
+              <ComplexTypeMapping TypeName="QuanLyNhaHangModel.Usp_GetAllBillDetailByBill_Result">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="FoodId" ColumnName="FoodId" />
                 <ScalarProperty Name="BillId" ColumnName="BillId" />
                 <ScalarProperty Name="Quantity" ColumnName="Quantity" />
                 <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="Id1" ColumnName="Id1" />
+                <ScalarProperty Name="TypeId" ColumnName="TypeId" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="Unit" ColumnName="Unit" />
+                <ScalarProperty Name="Picture" ColumnName="Picture" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
@@ -661,6 +733,27 @@
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="Usp_GetBillByDeskId" FunctionName="QuanLyNhaHangModel.Store.Usp_GetBillByDeskId">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="QuanLyNhaHangModel.Usp_GetBillByDeskId_Result">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="DeskId" ColumnName="DeskId" />
+                <ScalarProperty Name="AccountId" ColumnName="AccountId" />
+                <ScalarProperty Name="Total" ColumnName="Total" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="CreatedAt" ColumnName="CreatedAt" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="Usp_GetDeskById" FunctionName="QuanLyNhaHangModel.Store.Usp_GetDeskById">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="QuanLyNhaHangModel.Usp_GetDeskById_Result">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
           <FunctionImportMapping FunctionImportName="Usp_GetFoodByFoodType" FunctionName="QuanLyNhaHangModel.Store.Usp_GetFoodByFoodType">
             <ResultMapping>
               <ComplexTypeMapping TypeName="QuanLyNhaHangModel.Usp_GetFoodByFoodType_Result">
@@ -687,6 +780,8 @@
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="Usp_InsertBill" FunctionName="QuanLyNhaHangModel.Store.Usp_InsertBill" />
+          <FunctionImportMapping FunctionImportName="Usp_InsertBillDetail" FunctionName="QuanLyNhaHangModel.Store.Usp_InsertBillDetail" />
           <FunctionImportMapping FunctionImportName="Usp_InsertDesk" FunctionName="QuanLyNhaHangModel.Store.Usp_InsertDesk" />
           <FunctionImportMapping FunctionImportName="Usp_InsertFood" FunctionName="QuanLyNhaHangModel.Store.Usp_InsertFood" />
           <FunctionImportMapping FunctionImportName="Usp_SearchFoodByName" FunctionName="QuanLyNhaHangModel.Store.Usp_SearchFoodByName">
@@ -703,6 +798,7 @@
             </ResultMapping>
           </FunctionImportMapping>
           <FunctionImportMapping FunctionImportName="Usp_UpdateAccountById" FunctionName="QuanLyNhaHangModel.Store.Usp_UpdateAccountById" />
+          <FunctionImportMapping FunctionImportName="Usp_UpdateBill" FunctionName="QuanLyNhaHangModel.Store.Usp_UpdateBill" />
           <FunctionImportMapping FunctionImportName="USp_UpdateDesk" FunctionName="QuanLyNhaHangModel.Store.USp_UpdateDesk" />
           <FunctionImportMapping FunctionImportName="Usp_UpdateFood" FunctionName="QuanLyNhaHangModel.Store.Usp_UpdateFood" />
         </EntityContainerMapping>

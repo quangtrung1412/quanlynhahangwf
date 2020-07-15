@@ -32,7 +32,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.LbName = new System.Windows.Forms.Label();
             this.guna2GradientButton7 = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2GradientButton6 = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2GradientButton5 = new Guna.UI2.WinForms.Guna2GradientButton();
@@ -71,7 +71,7 @@
             // 
             this.panel4.BackColor = System.Drawing.Color.DimGray;
             this.panel4.Controls.Add(this.guna2CirclePictureBox1);
-            this.panel4.Controls.Add(this.label1);
+            this.panel4.Controls.Add(this.LbName);
             this.panel4.Location = new System.Drawing.Point(26, 38);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(146, 158);
@@ -90,16 +90,16 @@
             this.guna2CirclePictureBox1.TabIndex = 2;
             this.guna2CirclePictureBox1.TabStop = false;
             // 
-            // label1
+            // LbName
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(46, 111);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(54, 23);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Trung";
+            this.LbName.AutoSize = true;
+            this.LbName.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LbName.ForeColor = System.Drawing.Color.White;
+            this.LbName.Location = new System.Drawing.Point(25, 111);
+            this.LbName.Name = "LbName";
+            this.LbName.Size = new System.Drawing.Size(54, 23);
+            this.LbName.TabIndex = 1;
+            this.LbName.Text = "Trung";
             // 
             // guna2GradientButton7
             // 
@@ -353,7 +353,7 @@
         private System.Windows.Forms.Panel panelDisplay;
         private System.Windows.Forms.Panel panel4;
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label LbName;
     }
 }
 

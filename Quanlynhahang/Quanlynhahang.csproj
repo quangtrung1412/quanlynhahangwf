@@ -75,10 +75,13 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Handle\AddBillDetailHandle.cs" />
     <Compile Include="Handle\ChangeStateClick.cs" />
+    <Compile Include="Handle\DeleteDeskHandle.cs" />
     <Compile Include="Handle\DeleteFoodHandle.cs" />
     <Compile Include="Handle\DeskHandle.cs" />
     <Compile Include="Handle\EditFoodHandle.cs" />
+    <Compile Include="Handle\GetBillByIdDeskHandle.cs" />
     <Compile Include="Handle\GetFoodByIdHandle.cs" />
     <Compile Include="Handle\InsertFoodHandle.cs" />
     <Compile Include="Handle\LoadDeskHandle.cs" />
@@ -127,7 +130,7 @@
     <Compile Include="Models\Usp_GetAccountByLoginInfo_Result.cs">
       <DependentUpon>QuanLyNhaHang.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\Usp_GetAllBillDetailByBillDetail_Result.cs">
+    <Compile Include="Models\Usp_GetAllBillDetailByBill_Result.cs">
       <DependentUpon>QuanLyNhaHang.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Usp_GetAllBillDetail_Result.cs">
@@ -143,6 +146,12 @@
       <DependentUpon>QuanLyNhaHang.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Usp_GetAllFood_Result.cs">
+      <DependentUpon>QuanLyNhaHang.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Usp_GetBillByDeskId_Result.cs">
+      <DependentUpon>QuanLyNhaHang.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Usp_GetDeskById_Result.cs">
       <DependentUpon>QuanLyNhaHang.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Usp_GetFoodByFoodType_Result.cs">
@@ -415,6 +424,8 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="bin\Debug\Images\icons8-menu-vertical-60.png" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="Models\QuanLyNhaHang.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>QuanLyNhaHang.edmx</DependentUpon>

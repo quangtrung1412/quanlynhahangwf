@@ -35,6 +35,8 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.MctOption = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.ChangeState = new System.Windows.Forms.ToolStripMenuItem();
+            this.StateNull = new System.Windows.Forms.ToolStripMenuItem();
+            this.DeleteDesk = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.Option)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.MctOption.SuspendLayout();
@@ -89,9 +91,11 @@
             this.MctOption.AutoSize = false;
             this.MctOption.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.MctOption.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ChangeState});
+            this.ChangeState,
+            this.StateNull,
+            this.DeleteDesk});
             this.MctOption.Name = "contextMenuStrip1";
-            this.MctOption.Size = new System.Drawing.Size(105, 30);
+            this.MctOption.Size = new System.Drawing.Size(105, 80);
             // 
             // ChangeState
             // 
@@ -99,6 +103,18 @@
             this.ChangeState.Name = "ChangeState";
             this.ChangeState.Size = new System.Drawing.Size(135, 24);
             this.ChangeState.Text = "bàn bận";
+            // 
+            // StateNull
+            // 
+            this.StateNull.Name = "StateNull";
+            this.StateNull.Size = new System.Drawing.Size(143, 24);
+            this.StateNull.Text = "bàn trống";
+            // 
+            // DeleteDesk
+            // 
+            this.DeleteDesk.Name = "DeleteDesk";
+            this.DeleteDesk.Size = new System.Drawing.Size(143, 24);
+            this.DeleteDesk.Text = "xóa bàn";
             // 
             // Table
             // 
@@ -124,9 +140,11 @@
 
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label DeskName;
-        private System.Windows.Forms.Label State;
         private System.Windows.Forms.PictureBox Option;
-        private System.Windows.Forms.ContextMenuStrip MctOption;
-        private System.Windows.Forms.ToolStripMenuItem ChangeState;
+        private System.Windows.Forms.ToolStripMenuItem StateNull;
+        private System.Windows.Forms.ToolStripMenuItem DeleteDesk;
+        public System.Windows.Forms.ContextMenuStrip MctOption;
+        public System.Windows.Forms.ToolStripMenuItem ChangeState;
+        public System.Windows.Forms.Label State;
     }
 }
