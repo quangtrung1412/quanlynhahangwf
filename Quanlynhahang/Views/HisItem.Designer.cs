@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.Id = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
+            this.Table = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
+            this.Total = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
+            this.Date = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
+            this.NameAccount = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -48,100 +48,100 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.Id);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(50, 100);
             this.panel1.TabIndex = 0;
             // 
-            // label1
+            // Id
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 10.2F);
-            this.label1.Location = new System.Drawing.Point(14, 34);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(19, 23);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "1";
+            this.Id.AutoSize = true;
+            this.Id.Font = new System.Drawing.Font("Segoe UI", 10.2F);
+            this.Id.Location = new System.Drawing.Point(14, 34);
+            this.Id.Name = "Id";
+            this.Id.Size = new System.Drawing.Size(19, 23);
+            this.Id.TabIndex = 0;
+            this.Id.Text = "1";
             // 
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.Table);
             this.panel2.Location = new System.Drawing.Point(50, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(150, 100);
             this.panel2.TabIndex = 0;
             // 
-            // label2
+            // Table
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 10.2F);
-            this.label2.Location = new System.Drawing.Point(41, 34);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(19, 23);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "1";
+            this.Table.AutoSize = true;
+            this.Table.Font = new System.Drawing.Font("Segoe UI", 10.2F);
+            this.Table.Location = new System.Drawing.Point(41, 34);
+            this.Table.Name = "Table";
+            this.Table.Size = new System.Drawing.Size(19, 23);
+            this.Table.TabIndex = 0;
+            this.Table.Text = "1";
             // 
             // panel3
             // 
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.label3);
+            this.panel3.Controls.Add(this.Total);
             this.panel3.Location = new System.Drawing.Point(200, 0);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(157, 100);
             this.panel3.TabIndex = 0;
             // 
-            // label3
+            // Total
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 10.2F);
-            this.label3.Location = new System.Drawing.Point(65, 34);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(19, 23);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "1";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+            this.Total.AutoSize = true;
+            this.Total.Font = new System.Drawing.Font("Segoe UI", 10.2F);
+            this.Total.Location = new System.Drawing.Point(65, 34);
+            this.Total.Name = "Total";
+            this.Total.Size = new System.Drawing.Size(19, 23);
+            this.Total.TabIndex = 0;
+            this.Total.Text = "1";
+            this.Total.Click += new System.EventHandler(this.label3_Click);
             // 
             // panel4
             // 
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel4.Controls.Add(this.label4);
+            this.panel4.Controls.Add(this.Date);
             this.panel4.Location = new System.Drawing.Point(357, 0);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(198, 100);
             this.panel4.TabIndex = 0;
             // 
-            // label4
+            // Date
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 10.2F);
-            this.label4.Location = new System.Drawing.Point(73, 34);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(19, 23);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "1";
-            this.label4.Click += new System.EventHandler(this.label3_Click);
+            this.Date.AutoSize = true;
+            this.Date.Font = new System.Drawing.Font("Segoe UI", 10.2F);
+            this.Date.Location = new System.Drawing.Point(73, 34);
+            this.Date.Name = "Date";
+            this.Date.Size = new System.Drawing.Size(19, 23);
+            this.Date.TabIndex = 0;
+            this.Date.Text = "1";
+            this.Date.Click += new System.EventHandler(this.label3_Click);
             // 
             // panel5
             // 
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel5.Controls.Add(this.label5);
+            this.panel5.Controls.Add(this.NameAccount);
             this.panel5.Location = new System.Drawing.Point(555, 0);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(204, 100);
             this.panel5.TabIndex = 0;
             // 
-            // label5
+            // NameAccount
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 10.2F);
-            this.label5.Location = new System.Drawing.Point(101, 34);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(19, 23);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "1";
-            this.label5.Click += new System.EventHandler(this.label3_Click);
+            this.NameAccount.AutoSize = true;
+            this.NameAccount.Font = new System.Drawing.Font("Segoe UI", 10.2F);
+            this.NameAccount.Location = new System.Drawing.Point(101, 34);
+            this.NameAccount.Name = "NameAccount";
+            this.NameAccount.Size = new System.Drawing.Size(19, 23);
+            this.NameAccount.TabIndex = 0;
+            this.NameAccount.Text = "1";
+            this.NameAccount.Click += new System.EventHandler(this.label3_Click);
             // 
             // HisItem
             // 
@@ -176,10 +176,10 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label Id;
+        private System.Windows.Forms.Label Table;
+        private System.Windows.Forms.Label Total;
+        private System.Windows.Forms.Label Date;
+        private System.Windows.Forms.Label NameAccount;
     }
 }

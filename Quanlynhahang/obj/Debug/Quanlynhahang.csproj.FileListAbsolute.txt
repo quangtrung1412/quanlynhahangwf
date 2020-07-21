@@ -30,3 +30,4 @@ C:\Users\trung\source\repos\Quanlynhahang\Quanlynhahang\obj\Debug\Quanlynhahang.
 C:\Users\trung\source\repos\Quanlynhahang\Quanlynhahang\obj\Debug\Quanlynhahang.Views.Overlay.resources
 C:\Users\trung\source\repos\Quanlynhahang\Quanlynhahang\obj\Debug\Quanlynhahang.Views.Test.resources
 C:\Users\trung\source\repos\Quanlynhahang\Quanlynhahang\obj\Debug\Quanlynhahang.csprojAssemblyReference.cache
+C:\Users\trung\source\repos\Quanlynhahang\Quanlynhahang\obj\Debug\Quanlynhahang.Views.BookDesk.resources

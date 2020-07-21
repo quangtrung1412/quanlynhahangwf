@@ -14,12 +14,7 @@ namespace Quanlynhahang.Views
         public History()
         {
             InitializeComponent();
-            for(int i= 0; i < 10; i++)
-            {
-                Views.HisItem hi = new HisItem();
-                this.flowLayoutPanel1.Controls.Add(hi);
-                hi.Location = new Point(0, 0);
-            }
+           
         }
 
         private void panel5_Paint(object sender, PaintEventArgs e)

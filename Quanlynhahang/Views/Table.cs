@@ -42,10 +42,7 @@ namespace Quanlynhahang.Views
         }
 
         
-        public void DeleteDeskClick(EventHandler e)
-        {
-            this.DeleteDesk.Click += e;
-        }
+        
         public override bool Equals(object obj)
         {
             if (obj == null)

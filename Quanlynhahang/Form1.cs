@@ -14,6 +14,7 @@ namespace Quanlynhahang
     public partial class Form1 : Form
     {
         public Account Account { get; set; }
+        public ListTable ListTable { get; set; } = null;
         public Form1()
         {
             InitializeComponent();   
@@ -51,10 +52,13 @@ namespace Quanlynhahang
 
         private void guna2GradientButton2_Click(object sender, EventArgs e)
         {
-            Views.ListTable lt = new Views.ListTable(Account);
+            if(this.ListTable == null)
+            {
+                this.ListTable = new Views.ListTable(Account);
+            } 
             this.panelDisplay.Controls.Clear();
-            this.panelDisplay.Controls.Add(lt);
-            lt.Location = new Point(0, 0);
+            this.panelDisplay.Controls.Add(this.ListTable);
+            this.ListTable.Location = new Point(0, 0);
             this.Refresh();
         }
 

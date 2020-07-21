@@ -21,13 +21,13 @@ namespace Quanlynhahang.Handle
         public void Handle(object sender,EventArgs e)
         {
             listTable.ChangeState(d);
-            listTable.CurrentBill = new Bill();
-            listTable.CurrentBill.Id = "bill" + DateTime.Now.ToUniversalTime().Subtract(new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc)).TotalMilliseconds;
-            listTable.CurrentBill.DeskId = d.Id;
-            listTable.CurrentBill.Status = 0;
-            listTable.CurrentBill.AccountId = listTable.Account.Id;
-            listTable.ListBillDetail = new List<BillDetail>();
-            new BillDAO().InsertBill(listTable.CurrentBill);
+            Bill bill = new Bill();
+            bill.Id = "bill" + DateTime.Now.ToUniversalTime().Subtract(new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc)).TotalMilliseconds;
+            bill.DeskId = d.Id;
+            bill.Status = 0;
+            bill.AccountId = listTable.Account.Id;
+            listTable.ListBill.Add(bill);
+            listTable.DisplayBookForm(bill);
         }
     }
 }

@@ -85,11 +85,12 @@
             // 
             // guna2HtmlLabel1
             // 
+            this.guna2HtmlLabel1.AutoSize = false;
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
             this.guna2HtmlLabel1.Location = new System.Drawing.Point(14, 11);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(251, 38);
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(348, 38);
             this.guna2HtmlLabel1.TabIndex = 0;
             this.guna2HtmlLabel1.Text = "Danh sách món ăn ";
             this.guna2HtmlLabel1.Click += new System.EventHandler(this.guna2HtmlLabel1_Click);
@@ -297,7 +298,6 @@
             this.Size = new System.Drawing.Size(965, 780);
             this.Load += new System.EventHandler(this.ListFoods_Load);
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();

@@ -45,7 +45,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.fpHistory = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel7.SuspendLayout();
@@ -236,23 +236,23 @@
             this.label8.TabIndex = 4;
             this.label8.Text = "Đến :";
             // 
-            // flowLayoutPanel1
+            // fpHistory
             // 
-            this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.AutoScrollMinSize = new System.Drawing.Size(0, 533);
-            this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(102, 205);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(788, 553);
-            this.flowLayoutPanel1.TabIndex = 5;
-            this.flowLayoutPanel1.WrapContents = false;
-            this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
+            this.fpHistory.AutoScroll = true;
+            this.fpHistory.AutoScrollMinSize = new System.Drawing.Size(0, 533);
+            this.fpHistory.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.fpHistory.Location = new System.Drawing.Point(102, 205);
+            this.fpHistory.Name = "fpHistory";
+            this.fpHistory.Size = new System.Drawing.Size(788, 553);
+            this.fpHistory.TabIndex = 5;
+            this.fpHistory.WrapContents = false;
+            this.fpHistory.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
             // 
             // History
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.flowLayoutPanel1);
+            this.Controls.Add(this.fpHistory);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.panel2);
@@ -298,6 +298,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.FlowLayoutPanel fpHistory;
     }
 }

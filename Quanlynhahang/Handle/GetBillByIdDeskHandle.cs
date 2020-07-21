@@ -21,11 +21,14 @@ namespace Quanlynhahang.Handle
         }
         public void Handle(object sender ,EventArgs e)
         {
-            int i = 0;
-            List<Bill> list = new BillDAO().GetBillByDeskId(d.Id,0);
-            if(list.Count > 0)
+            foreach(var bill in listTable.ListBill)
             {
-
+                if(bill.DeskId.Equals(d.Id))
+                {
+                    BookDesk bookDesk = new BookDesk(listTable, bill);
+                    bookDesk.ShowDialog();
+                    break;
+                }
             }
         }
     }

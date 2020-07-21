@@ -148,4 +148,4 @@ Create proc USp_UpdateDesk (@id as varchar(30),@status as tinyint) as update Des
 go
 create proc Usp_GetDeskById(@id as varchar(30))as select * from Desk where Id=@id
 
-
+select * from Bill , BillDetail where BillDetail.BillId = Bill.id

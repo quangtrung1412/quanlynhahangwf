@@ -35,8 +35,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.MctOption = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.ChangeState = new System.Windows.Forms.ToolStripMenuItem();
-            this.StateNull = new System.Windows.Forms.ToolStripMenuItem();
-            this.DeleteDesk = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.Option)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.MctOption.SuspendLayout();
@@ -91,9 +89,7 @@
             this.MctOption.AutoSize = false;
             this.MctOption.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.MctOption.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ChangeState,
-            this.StateNull,
-            this.DeleteDesk});
+            this.ChangeState});
             this.MctOption.Name = "contextMenuStrip1";
             this.MctOption.Size = new System.Drawing.Size(105, 80);
             // 
@@ -102,19 +98,7 @@
             this.ChangeState.AutoSize = false;
             this.ChangeState.Name = "ChangeState";
             this.ChangeState.Size = new System.Drawing.Size(135, 24);
-            this.ChangeState.Text = "bàn bận";
-            // 
-            // StateNull
-            // 
-            this.StateNull.Name = "StateNull";
-            this.StateNull.Size = new System.Drawing.Size(143, 24);
-            this.StateNull.Text = "bàn trống";
-            // 
-            // DeleteDesk
-            // 
-            this.DeleteDesk.Name = "DeleteDesk";
-            this.DeleteDesk.Size = new System.Drawing.Size(143, 24);
-            this.DeleteDesk.Text = "xóa bàn";
+            this.ChangeState.Text = "Đặt bàn";
             // 
             // Table
             // 
@@ -125,7 +109,7 @@
             this.Controls.Add(this.State);
             this.Controls.Add(this.DeskName);
             this.Controls.Add(this.pictureBox1);
-            this.Margin = new System.Windows.Forms.Padding(5);
+            this.Margin = new System.Windows.Forms.Padding(8);
             this.Name = "Table";
             this.Size = new System.Drawing.Size(135, 180);
             ((System.ComponentModel.ISupportInitialize)(this.Option)).EndInit();
@@ -141,8 +125,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label DeskName;
         private System.Windows.Forms.PictureBox Option;
-        private System.Windows.Forms.ToolStripMenuItem StateNull;
-        private System.Windows.Forms.ToolStripMenuItem DeleteDesk;
         public System.Windows.Forms.ContextMenuStrip MctOption;
         public System.Windows.Forms.ToolStripMenuItem ChangeState;
         public System.Windows.Forms.Label State;

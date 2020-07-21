@@ -11,7 +11,7 @@ namespace Quanlynhahang.Models
 {
     using System;
     using System.Collections.Generic;
-    
+
     public partial class Bill
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -19,14 +19,14 @@ namespace Quanlynhahang.Models
         {
             this.BillDetails = new HashSet<BillDetail>();
         }
-    
+
         public string Id { get; set; }
         public string DeskId { get; set; }
         public Nullable<int> AccountId { get; set; }
         public Nullable<int> Total { get; set; }
         public Nullable<int> Status { get; set; }
         public Nullable<System.DateTime> CreatedAt { get; set; }
-    
+        public List<BillDetail> ListBillDetail = new List<BillDetail>();
         public virtual Account Account { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<BillDetail> BillDetails { get; set; }

@@ -9,21 +9,28 @@ namespace Quanlynhahang.Handle
 {
     public class AddBillDetailHandle
     {
-        private ListTable listTable;
+        private BookDesk bookDesk;
 
-        public AddBillDetailHandle(ListTable listTable)
+        public AddBillDetailHandle(BookDesk bookDesk)
         {
 
-            this.listTable = listTable;
+            this.bookDesk = bookDesk;
         }
-        public void Handle(string foodId, int quanlity)
+        public void Handle(Food food, int quanlity)
         {
             BillDetail billDetail = new BillDetail();
-            billDetail.FoodId = foodId;
+            billDetail.FoodId = food.Id;
             billDetail.Quantity = quanlity;
-            billDetail.BillId = listTable.CurrentBill.Id;
-            listTable.ListBillDetail.Add(billDetail);
-            listTable.DisplayBillDetail(billDetail);
+            billDetail.BillId = this.bookDesk.bill.Id;
+            billDetail.Food = food;
+            foreach (var bill in this.bookDesk.listTable.ListBill)
+            {
+                if (bill.Id.Equals(this.bookDesk.bill.Id))
+                {
+                    bill.ListBillDetail.Add(billDetail);
+                }
+            }
+            this.bookDesk.DisplayBillDetail(billDetail);
         }
     }
 }
